@@ -17,7 +17,7 @@ export function Navigation() {
   return (
     <>
       <header
-        className="py-[16.5px] fixed w-full bg-black flex items-center justify-between sm:justify-start lg:justify-between top-0 px-[20px] md:px-[30px] gap-x-[60px] xl:px-[97px]"
+        className="fixed w-full bg-black flex items-center justify-between sm:justify-start lg:justify-between top-0 px-[20px] md:px-[30px] gap-x-[60px] xl:px-[97px]"
         style={{ zIndex: 20 }}
       >
         <Link href={"/"}>
@@ -30,7 +30,7 @@ export function Navigation() {
         </Link>
 
         <nav className="w-[70%] text-white xl:w-[55%] hidden sm:block">
-          <ul className="flex items-center gap-x-[30px] justify-between">
+          <ul className="flex text-base items-center gap-x-[30px] justify-between">
             <li>
               <Link href={"/"} style={pathname === "/" ? active : {}}>
                 Home
