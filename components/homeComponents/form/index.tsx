@@ -38,7 +38,7 @@ const ContactForm = () => {
   return (
     <div className="grid grid-cols-1 md:flex md:flex-row lg:px-28 px-6 py-12 bg-white gap-8">
   <form onSubmit={handleSubmit} className="md:w-[55%] md:pr-4 bg-[#FB2B30] bg-opacity-15 p-10 rounded-2xl">
-    <h3 className="text-[#FB2B30] text-2xl md:text-3xl font-bold pb-6">Let's Talk</h3>
+    <h3 className="text-[#FB2B30] text-2xl md:text-3xl font-bold pb-6">Let&apos;s Talk</h3>
   
     {/* Name Input */}
     <div className="mb-4">
@@ -166,6 +166,7 @@ const ContactForm = () => {
     </div>
   </div>
 </div>
+
 
   );
 };
