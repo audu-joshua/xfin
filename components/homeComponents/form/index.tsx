@@ -37,136 +37,136 @@ const ContactForm = () => {
 
   return (
     <div className="grid grid-cols-1 md:flex md:flex-row lg:px-28 px-6 py-12 bg-white gap-8">
-      <form onSubmit={handleSubmit} className="md:w-[55%] md:pr-4 bg-[#FB2B30] bg-opacity-15 p-10 rounded-2xl">
-  <h3 className="text-[#FB2B30] text-2xl md:text-3xl font-bold pb-6">Let's Talk</h3>
+  <form onSubmit={handleSubmit} className="md:w-[55%] md:pr-4 bg-[#FB2B30] bg-opacity-15 p-10 rounded-2xl">
+    <h3 className="text-[#FB2B30] text-2xl md:text-3xl font-bold pb-6">Let's Talk</h3>
   
-  {/* Name Input */}
-  <div className="mb-4">
-    <label className="block text-black mb-1">Name</label>
-    <input
-      type="text"
-      name="name"
-      value={formData.name}
-      onChange={handleChange}
-      className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
-      required
-    />
-  </div>
-
-  {/* Phone and Email Inputs - Flex on Medium Screens */}
-  <div className="mb-4 md:flex md:space-x-4">
-    <div className="md:w-1/2">
-      <label className="block text-black mb-1">Phone</label>
-      <input
-        type="tel"
-        name="phone"
-        value={formData.phone}
-        onChange={handleChange}
-        className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
-        required
-      />
-    </div>
-    <div className="md:w-1/2">
-      <label className="block text-black mb-1">Email</label>
-      <input
-        type="email"
-        name="email"
-        value={formData.email}
-        onChange={handleChange}
-       className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
-        required
-      />
-    </div>
-  </div>
-
-  {/* Industry and Expected Budget Inputs - Flex on Medium Screens */}
-  <div className="mb-4 md:flex md:space-x-4">
-    <div className="md:w-1/2">
-      <label className="block text-black mb-1">Industry</label>
+    {/* Name Input */}
+    <div className="mb-4">
+      <label className="block text-black mb-1">Name</label>
       <input
         type="text"
-        name="industry"
-        value={formData.industry}
+        name="name"
+        value={formData.name}
         onChange={handleChange}
         className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
-        />
-    </div>
-    <div className="md:w-1/2">
-      <label className="block text-black mb-1">Expected Budget</label>
-      <input
-        type="text"
-        name="budget"
-        value={formData.budget}
-        onChange={handleChange}
-        className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
-        />
-    </div>
-  </div>
-
-  {/* Message Textarea */}
-  <div className="mb-4">
-    <label className="block text-black mb-1">Message</label>
-    <textarea
-      name="message"
-      value={formData.message}
-      onChange={handleChange}
-      className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
-    />
-  </div>
-
-  {/* Agreement Checkbox */}
-  <div className="mb-4">
-    <label className="flex items-center text-black mb-1">
-      <input
-        type="checkbox"
-        name="agreement"
-        checked={formData.agreement}
-        onChange={handleChange}
-        className="mr-2"
         required
       />
-      I agree that my personal information will be processed and stored by Xifin Enterprise.
-    </label>
+    </div>
+
+    {/* Phone and Email Inputs - Flex on Medium Screens */}
+    <div className="mb-4 md:flex md:space-x-4">
+      <div className="md:w-1/2">
+        <label className="block text-black mb-1">Phone</label>
+        <input
+          type="tel"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
+          required
+        />
+      </div>
+      <div className="md:w-1/2">
+        <label className="block text-black mb-1">Email</label>
+        <input
+          type="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
+          required
+        />
+      </div>
+    </div>
+
+    {/* Industry and Expected Budget Inputs - Flex on Medium Screens */}
+    <div className="mb-4 md:flex md:space-x-4">
+      <div className="md:w-1/2">
+        <label className="block text-black mb-1">Industry</label>
+        <input
+          type="text"
+          name="industry"
+          value={formData.industry}
+          onChange={handleChange}
+          className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
+        />
+      </div>
+      <div className="md:w-1/2">
+        <label className="block text-black mb-1">Expected Budget</label>
+        <input
+          type="text"
+          name="budget"
+          value={formData.budget}
+          onChange={handleChange}
+          className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
+        />
+      </div>
+    </div>
+
+    {/* Message Textarea */}
+    <div className="mb-4">
+      <label className="block text-black mb-1">Message</label>
+      <textarea
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+        className="w-full p-2 border-b-2 border-black focus:outline-none text-black rounded-md bg-transparent"
+      />
+    </div>
+
+    {/* Agreement Checkbox */}
+    <div className="mb-4">
+      <label className="flex items-center text-black mb-1">
+        <input
+          type="checkbox"
+          name="agreement"
+          checked={formData.agreement}
+          onChange={handleChange}
+          className="mr-2"
+          required
+        />
+        I agree that my personal information will be processed and stored by Xifin Enterprise.
+      </label>
+    </div>
+
+    {/* Submit Button */}
+    <button type="submit" className="bg-[#FB2B30] text-white p-2 px-8 mt-4 rounded-full">Send</button>
+  </form>
+
+  <div className="md:w-[45%] grid items-center relative">
+    {/* Image Container */}
+    <div className="relative rounded-2xl overflow-hidden">
+      {/* Insert your image here */}
+      <img src="./images/IMG_20230804_021813.png" alt="Your Image" className="w-full" />
+      {/* Glassmorphic Overlay */}
+      <div className="absolute bottom-2 md:bottom-6 w-full md:h-[35%] h-[40%] p-2 md:p-4 bg-white bg-opacity-40 backdrop-blur-sm">
+        <h4 className="text-lg md:text-xl font-semibold text-black text-center py-2">Jude Iria, CEO</h4>
+        <div className="grid md:grid-cols-2 gap-4 py-2">
+          <div className="flex text-black">
+            <img src="./images/mail.png" alt="mail" />
+            <p className="px-4">judeiria3390@gmail.com</p>
+          </div>
+
+          <div className="flex text-black">
+            <img src="./images/linkedin.png" alt="linkedin" />
+            <p className="px-4">Jude Iria</p>
+          </div>
+
+          <div className="md:flex hidden text-black">
+            <img src="./images/phone.png" alt="phone" />
+            <p className="px-4">+2349035240907</p>
+          </div>
+
+          <div className="md:flex hidden text-black">
+            <img src="./images/instagram.png" alt="instagram" />
+            <p className="px-4">Xifin Enterprise</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  {/* Submit Button */}
-  <button type="submit" className="bg-[#FB2B30] text-white p-2 px-8 mt-4 rounded-full">Send</button>
-</form>
-
-<div className="md:w-[45%] grid items-center relative">
-  {/* Image Container */}
-  <div className="relative rounded-2xl overflow-hidden">
-    {/* Insert your image here */}
-    <img src="./images/IMG_20230804_021813.png" alt="Your Image" className="w-full" />
-    {/* Glassmorphic Overlay */}
-    <div className="absolute bottom-6 w-full h-[35%] p-2 md:p-4 bg-white bg-opacity-40 backdrop-blur-sm">
-    <h4 className="text-lg md:text-xl font-semibold text-black text-center py-2">Jude Iria, CEO</h4>
-    <div className='grid grid-cols-2 gap-4 py-2'>
-        <div className='flex text-black'>
-            <img src='./images/mail.png'></img>
-            <p className='px-4'> judeiria3390@gmail.com </p>
-        </div>
-
-        <div className='flex text-black'>
-        <img src='./images/linkedin.png'></img>
-            <p className='px-4'> Jude Iria </p>
-        </div>
-
-        <div className='flex text-black'>
-        <img src='./images/phone.png'></img>
-            <p className='px-4'> +2349035240907 </p>
-        </div>
-
-        <div className='flex text-black'>
-        <img src='./images/instagram.png'></img>
-            <p className='px-4'> Xifin Enterprise </p>
-        </div>
-    </div>
-    </div>
-  </div> 
 </div>
 
-    </div>
   );
 };
 
