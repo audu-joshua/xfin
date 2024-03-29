@@ -139,7 +139,7 @@ const ContactForm = () => {
       {/* Insert your image here */}
       <img src="./images/IMG_20230804_021813.png" alt="Your Image" className="w-full" />
       {/* Glassmorphic Overlay */}
-      <div className="absolute bottom-2 md:bottom-6 w-full md:h-[35%] h-[40%] p-2 md:p-4 bg-white bg-opacity-40 backdrop-blur-sm">
+      <div className="absolute bottom-2 mx-4 rounded-xl md:bottom-6 w-full md:h-[35%] h-[40%] p-2 md:p-4 bg-white bg-opacity-40 backdrop-blur-sm">
         <h4 className="text-lg md:text-xl font-semibold text-black text-center py-2">Jude Iria, CEO</h4>
         <div className="grid md:grid-cols-2 gap-4 py-2">
           <div className="flex text-black">

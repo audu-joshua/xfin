@@ -6,7 +6,7 @@ import { FiInstagram } from "react-icons/fi";
 import { BsFacebook, BsTwitter, BsLinkedin, BsYoutube } from "react-icons/bs";
 export function Footer() {
   return (
-    <footer className="p-[20px] bg-[#FB2B30] w-full md:py-[30px] md:px-[108px]">
+    <footer className="p-[20px] bg-[#FB2B30] w-full md:py-[30px] md:px-[108px] z-20" style={{ zIndex: 20 }}>
       <div className="lg:grid grid-cols-2 justify-between gap-x-[50px] lg:gap-x-[150px] 2xl:gap-x-[325px]">
         <section>
           <div>

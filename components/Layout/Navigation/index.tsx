@@ -62,7 +62,7 @@ export function Navigation() {
             </li>
             <li className="bg-[#FF0909] p-4 px-8 rounded-full shadow-2xl shadow-[#FF0909]">
               <Link
-                href={"/events"}
+                href={"/contact"}
                 style={pathname.includes("/events") ? active : {}}
               >
                 Contact us
@@ -134,7 +134,7 @@ export function Navigation() {
 
         <li className="bg-[#FF0909] mx-10 p-4 px-6 rounded-full shadow-2xl shadow-[#FF0909]">
               <Link
-                href={"/events"}
+                href={"/contact"}
                 style={pathname.includes("/events") ? active : {}}
               >
                 Contact us
