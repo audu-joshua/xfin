@@ -46,7 +46,7 @@ export function Navigation() {
             </li>
             <li>
               <Link
-                href={"/invest"}
+                href={"/services"}
                 style={pathname.includes("/services") ? active : {}}
               >
                 Services
