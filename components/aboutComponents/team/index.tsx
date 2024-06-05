@@ -33,12 +33,12 @@ export default function Team() {
         <div className='grid gap-8 md:flex md:justify-between py-12 md:py-16 items-center text-center'>
         <div className='text-center flex items-center justify-start md:justify-center'>
       <img src='./images/Group8.svg' className='text-[#938888] text-center text-3xl md:text-4xl lg:text-5xl font-bold justify-center md:justify-normal  flex'/>
-        43% <em className=' text-black text-[16px] md:text-[24px]  w-full leading-none md:w-[60%] font-medium not-italic text-left px-2 flex items-center'> 50% of team growth per year </em>
+        <em className=' text-black text-[16px] md:text-[24px]  w-full leading-none md:w-[60%] font-medium not-italic text-left px-2 flex items-center'> 50% of team growth per year </em>
     </div>
 
     <div className='text-center flex items-center justify-start md:justify-center'>
       <img src='./images/Group7.svg' className='text-[#938888] text-center text-3xl md:text-4xl lg:text-5xl font-bold justify-center md:justify-normal  flex'/>
-        35% <em className=' text-black text-[16px] md:text-[24px]  w-full leading-none md:w-[60%] font-medium not-italic text-left px-2 flex items-center'> 80% of the team have at least 5 years of experience </em>
+        <em className=' text-black text-[16px] md:text-[24px]  w-full leading-none md:w-[60%] font-medium not-italic text-left px-2 flex items-center'> 80% of the team have at least 5 years of experience </em>
     </div>
         </div>
     </div>

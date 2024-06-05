@@ -1,31 +1,43 @@
 "use client";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
-import { MdOutlineKeyboardArrowDown } from "react-icons/md";
-import { usePathname, useRouter } from "next/navigation";
-
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const active = {
-    fontWeight: 700,
-    paddingBottom: "7px",
-    borderBottom: "1px solid black",
-  };
+  fontWeight: 700,
+  paddingBottom: '7px',
+  borderBottom: '1px solid black',
+};
 
-export function Navigation() {
-    const [hamburger, setHamburger] = useState<boolean>(false);
-    const pathname = usePathname();
+export const Navigation = () => {
+  const [hamburger, setHamburger] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <header
-        className="fixed w-full bg-black flex items-center justify-between sm:justify-start lg:justify-between top-0 px-[20px] md:px-[30px] gap-x-[60px] xl:px-[97px]"
-        style={{ zIndex: 20 }}
-      >
+    <header
+      className={`fixed w-full flex items-center justify-between top-0 px-[20px] md:px-[30px] gap-x-[60px] xl:px-[97px] ${scrollPosition ? 'bg-black' : ' bg-opacity-1  bg-transparent'}`}
+      style={{ zIndex: 20, transition: 'background-color 0.3s' }}
+    >
+
         <Link href={"/"}>
           <img
             src={"/images/logo.svg"}
             alt="logo"
             height={"120px"}
-            width={"120px"}
+            width={"100px"}
           />
         </Link>
 
@@ -54,7 +66,7 @@ export function Navigation() {
             </li>
             <li>
               <Link
-                href={"/learning"}
+                href={"/career"}
                 style={pathname.includes("/career") ? active : {}}
               >
                 Career
@@ -127,7 +139,7 @@ export function Navigation() {
           </Link>
         </li>
         <li className="py-[10px] bg-black">
-          <Link href={"/Career"} className="py-[10px]">
+          <Link href={"/career"} className="py-[10px]">
             Career
           </Link>
         </li>

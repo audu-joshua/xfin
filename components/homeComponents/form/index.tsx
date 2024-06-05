@@ -1,5 +1,11 @@
 "use client"
 import React, { useState, ChangeEvent, FormEvent } from 'react';
+import Image from 'next/image';
+import jude from '@/public/images/IMG_20230804_021813.png'
+import mail from '@/public/images/mail.png'
+import linkedin from '@/public/images/linkedin.png'
+import phone from '@/public/images/phone.png'
+import instagram from '@/public/images/instagram.png'
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -37,11 +43,11 @@ const ContactForm = () => {
 
   return (
     <div className="grid grid-cols-1 md:flex md:flex-row lg:px-28 px-6 py-12 bg-white gap-8">
-  <form onSubmit={handleSubmit} className="md:w-[55%] md:pr-4 bg-[#FB2B30] bg-opacity-15 p-10 rounded-2xl">
-    <h3 className="text-[#FB2B30] text-2xl md:text-3xl font-bold pb-6">Let&apos;s Talk</h3>
+  <form onSubmit={handleSubmit} className="md:w-[55%] md:pr-4 bg-[#FB2B30] bg-opacity-15 p-10 md:py-4 rounded-2xl">
+    <h3 className="text-[#FB2B30] text-2xl md:text-3xl font-bold pb-6 md:pb-4">Let&apos;s Talk</h3>
   
     {/* Name Input */}
-    <div className="mb-4">
+    <div className="mb-2">
       <label className="block text-black mb-1">Name</label>
       <input
         type="text"
@@ -54,7 +60,7 @@ const ContactForm = () => {
     </div>
 
     {/* Phone and Email Inputs - Flex on Medium Screens */}
-    <div className="mb-4 md:flex md:space-x-4">
+    <div className="mb-2 md:flex md:space-x-4">
       <div className="md:w-1/2">
         <label className="block text-black mb-1">Phone</label>
         <input
@@ -80,7 +86,7 @@ const ContactForm = () => {
     </div>
 
     {/* Industry and Expected Budget Inputs - Flex on Medium Screens */}
-    <div className="mb-4 md:flex md:space-x-4">
+    <div className="mb-2 md:flex md:space-x-4">
       <div className="md:w-1/2">
         <label className="block text-black mb-1">Industry</label>
         <input
@@ -104,7 +110,7 @@ const ContactForm = () => {
     </div>
 
     {/* Message Textarea */}
-    <div className="mb-4">
+    <div className="mb-2">
       <label className="block text-black mb-1">Message</label>
       <textarea
         name="message"
@@ -115,7 +121,7 @@ const ContactForm = () => {
     </div>
 
     {/* Agreement Checkbox */}
-    <div className="mb-4">
+    <div className="mb-2">
       <label className="flex items-center text-black mb-1">
         <input
           type="checkbox"
@@ -137,28 +143,28 @@ const ContactForm = () => {
     {/* Image Container */}
     <div className="relative rounded-2xl overflow-hidden">
       {/* Insert your image here */}
-      <img src="./images/IMG_20230804_021813.png" alt="Your Image" className="w-full" />
+      <Image src={jude} alt="Your Image" className="w-full" />
       {/* Glassmorphic Overlay */}
       <div className="absolute bottom-2 mx-4 rounded-xl md:bottom-6 w-full md:h-[35%] h-[40%] p-2 md:p-4 bg-white bg-opacity-40 backdrop-blur-sm">
         <h4 className="text-lg md:text-xl font-semibold text-black text-center py-2">Jude Iria, CEO</h4>
         <div className="grid md:grid-cols-2 gap-4 py-2">
           <div className="flex text-black">
-            <img src="./images/mail.png" alt="mail" />
+          <Image src={mail} alt="Mail Adress" className='text-black bg-red-500'/>
             <p className="px-4">judeiria3390@gmail.com</p>
           </div>
 
           <div className="flex text-black">
-            <img src="./images/linkedin.png" alt="linkedin" />
+          <Image src={linkedin} alt="Linkedin"/>
             <p className="px-4">Jude Iria</p>
           </div>
 
           <div className="md:flex hidden text-black">
-            <img src="./images/phone.png" alt="phone" />
+          <Image src={phone} alt="Phone Number"/>
             <p className="px-4">+2349035240907</p>
           </div>
 
           <div className="md:flex hidden text-black">
-            <img src="./images/instagram.png" alt="instagram" />
+          <Image src={instagram} alt="Instagram"/>
             <p className="px-4">Xifin Enterprise</p>
           </div>
         </div>

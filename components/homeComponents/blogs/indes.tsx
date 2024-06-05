@@ -1,5 +1,8 @@
 import React from 'react'
 import { isDate } from 'util/types'
+import b1 from '@/public/images/b1.png'
+import b2 from '@/public/images/b2.png'
+import b3 from '@/public/images/b3.png'
 
 export default function Blogs() {
   return (
@@ -22,21 +25,21 @@ export default function Blogs() {
 const data = [
     {
       id: 1,
-      image: "./images/b1.png",
+      image: {b1},
       title: "The Evolution Of Finance: A Journey From The Past To The Present",
       date: "2024-01-29"
     },
   
     {
       id: 2,
-      image: "./images/b2.png",
+      image: {b2},
       title: "The Evolution Of Finance: A Journey From The Past To The Present",
       date: "2024-01-29"
     },
   
     {
       id: 3,
-      image: "./images/b3.png",
+      image: {b3},
       title: "The Evolution Of Finance: A Journey From The Past To The Present",
       date: "2024-01-29"
     },

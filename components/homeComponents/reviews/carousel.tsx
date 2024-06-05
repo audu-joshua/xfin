@@ -1,81 +1,57 @@
 'use client';
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Star from '@mui/icons-material/Star';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import { ReviewData } from '@/utils/review';
+import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 export default function CarouselWithContent() {
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 1
-  };
+  const [current, setCurrent] = useState(0);
+  const [itemsToShow, setItemsToShow] = useState(window.innerWidth < 768 ? 1 : 2);
+
+  const nextReview = () => {
+    setCurrent(current === ReviewData.length - 1 ? 0 : current + 1)
+  }
+
+  const prevReview = () => {
+    setCurrent(current === 0 ? ReviewData.length - 1 : current - 1)
+  }
+
+  useEffect(() => {
+    const resizeListener = () => {
+      setItemsToShow(window.innerWidth < 768 ? 1 : 2);
+    };
+    window.addEventListener('resize', resizeListener);
+
+    return () => {
+      window.removeEventListener('resize', resizeListener);
+    }
+  }, []);
 
   return (
-    <div className="bg-black lg:px-28 px-6 py-6">
-      <div className='w-3/4 m-auto bg-black rounded-xl'>
-      <Slider {...settings} className=' gap-12'>
-  {data.map(d => (
-    <div key={d.id} className=' bg-[#C4C4C4] h-60 border border-red-600 border-solid rounded-xl px-8 py-10 align-middle text-center'> {/* Assuming each item in data has a unique identifier like 'id' */}
-      {[...Array(5)].map((_, index) => (
-        <Star key={index} className='text-black' />
-      ))}
-      <div className='grid gap-6'>
-       <h3 className='text-black'> {d.review} </h3>
-        <p className='py-6 text-black'> {d.reviewer} </p>
+    <div className='px-[20px] md:px-[30px] xl:px-[97px] bg-white'>
+      <div className=' flex gap-4 justify-between items-center py-4 md:pr-12'>
+        <div className='bg-black cursor-pointer p-2 md:p-4 flex justify-center items-center h-fit rounded-full' onClick={prevReview}>
+        <FaArrowLeft className='text-white'/>
+        </div>
+      
+      <div className="flex flex-wrap justify-center">
+        {ReviewData.slice(current, current + itemsToShow).map((item, i) => (
+          <div key={i} className="w-full md:w-1/2 px-4 mb-4">
+              <div className='grid bg-[#C4C4C4] w-full h-full justify-center gap-4 px-6 py-8 rounded-2xl text-black  items-center'>
+                <p className=" text-base md:text-xl font-bold">{item.review}</p>
+                <p className=" text-sm font-normal">{item.reviewer}</p>
+              </div>
+          </div>
+        ))}
       </div>
-    </div>
-  ))}
-  </Slider>
-
-  <style jsx>{`
-        .slick-slide > div {
-          margin-right: 10px; /* Adjust this value as needed for the desired spacing */
-        }
-      `}</style>
-
-</div>
-
+      <div className='bg-black cursor-pointer p-2 md:p-4 flex justify-center items-center h-fit rounded-full' onClick={nextReview}>
+        <FaArrowRight className='text-white'/>
+        </div> 
+      </div>
     </div>
   );
 }
-
-
-const data = [
-  {
-    id: 1,
-    review: "We had a great partnership where they committed to getting the work done",
-    reviewer: "CEO & Founder, Startup Company"
-  },
-
-  {
-    id: 2,
-    star: "./images/star.png",
-    review: "We had a great partnership where they committed to getting the work done",
-    reviewer: "CEO & Founder, Startup Company"
-  },
-
-  {
-    id: 3,
-    review: "We had a great partnership where they committed to getting the work done",
-    reviewer: "Earnest"
-  },
-
-  {
-    id: 4,
-    review: "We had a great partnership where they committed to getting the work done",
-    reviewer: "Josh"
-  },
-
-  {
-    id: 5,
-    review: "We had a great partnership where they committed to getting the work done",
-    reviewer: "Jude"
-  }
-
-]
