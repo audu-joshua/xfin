@@ -149,7 +149,7 @@ const ContactForm = () => {
         <h4 className="text-lg md:text-xl font-semibold text-black text-center py-2">Jude Iria, CEO</h4>
         <div className="grid md:grid-cols-2 gap-4 py-2">
           <div className="flex text-black">
-          <Image src={mail} alt="Mail Adress" className='text-black bg-red-500'/>
+          <Image src={mail} alt="Mail Adress" className='text-black '/>
             <p className="px-4">judeiria3390@gmail.com</p>
           </div>
 
