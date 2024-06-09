@@ -10,26 +10,30 @@ import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 export default function CarouselWithContent() {
 
   const [current, setCurrent] = useState(0);
-  const [itemsToShow, setItemsToShow] = useState(window.innerWidth < 768 ? 1 : 2);
+const [itemsToShow, setItemsToShow] = useState(1); // initialize with 1 as a default
 
-  const nextReview = () => {
-    setCurrent(current === ReviewData.length - 1 ? 0 : current + 1)
+const nextReview = () => {
+  setCurrent(current === ReviewData.length - 1 ? 0 : current + 1);
+}
+
+const prevReview = () => {
+  setCurrent(current === 0 ? ReviewData.length - 1 : current - 1);
+}
+
+useEffect(() => {
+  // Move this inside useEffect, as window object will be available here (running on client-side)
+  setItemsToShow(window.innerWidth < 768 ? 1 : 2);
+  
+  const resizeListener = () => {
+    setItemsToShow(window.innerWidth < 768 ? 1 : 2);
+  };
+  window.addEventListener('resize', resizeListener);
+
+  return () => {
+    window.removeEventListener('resize', resizeListener);
   }
+}, []);
 
-  const prevReview = () => {
-    setCurrent(current === 0 ? ReviewData.length - 1 : current - 1)
-  }
-
-  useEffect(() => {
-    const resizeListener = () => {
-      setItemsToShow(window.innerWidth < 768 ? 1 : 2);
-    };
-    window.addEventListener('resize', resizeListener);
-
-    return () => {
-      window.removeEventListener('resize', resizeListener);
-    }
-  }, []);
 
   return (
     <div className='px-[20px] md:px-[30px] xl:px-[97px] bg-white'>
