@@ -4,26 +4,32 @@ import { TestomonialData } from '@/utils/testimonials';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 export default function CareerTestimonials() {
+  // Only reference window inside useEffect
   const [current, setCurrent] = useState(0);
-  const [itemsToShow, setItemsToShow] = useState(window.innerWidth < 768 ? 1 : 2);
-
+  const [itemsToShow, setItemsToShow] = useState(0);
+  
   const nextTestimonial = () => {
     setCurrent(current === TestomonialData.length - 1 ? 0 : current + 1)
   }
-
+  
   const prevTestimonial = () => {
     setCurrent(current === 0 ? TestomonialData.length - 1 : current - 1)
   }
-
+  
   useEffect(() => {
+    // Now window.innerWidth will not be called at server side rendering time
+    setItemsToShow(window.innerWidth < 768 ? 1 : 2);
+    
     const resizeListener = () => {
       setItemsToShow(window.innerWidth < 768 ? 1 : 2);
     };
+    
     window.addEventListener('resize', resizeListener);
-
+    
     return () => {
       window.removeEventListener('resize', resizeListener);
     }
+    
   }, []);
 
   return (
