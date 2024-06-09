@@ -5,7 +5,7 @@ export function VAServices() {
     <div className='z-30 pt-10 md:pt-20 pb-10 px-[20px] md:px-[30px] xl:px-[97px] bg-white'>
       <div className='text-white md:w-[65%]'>
            <h2 className=' text-2xl md:text-4xl lg:text-5xl font-bold py-4 text-[#FF0909]'> Virtual Assistance </h2>    
-           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal text-black'>Get the support you need, when you need it, with our virtual assistance service. From administrative tasks to customer support, we've got you covered. Focus on what you do best and leave the rest to us!</p> 
+           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal text-black'>Get the support you need, when you need it, with our virtual assistance service. From administrative tasks to customer support, we&apos;ve got you covered. Focus on what you do best and leave the rest to us!</p> 
         </div>   
 
            <div className='my-8 md:flex md:justify-between'>

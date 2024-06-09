@@ -8,7 +8,7 @@ export function VAHero() {
            <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal'>Get the support you need, when you need it, with our virtual assistance service. From administrative tasks to customer support, we've got you covered. Focus on what you do best and leave the rest to us!</p>    
 
            <div className='my-8'>
-                <p className='py-2 px-8 lg:py-3 text-white bg-[#FF0909] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center'> Let’s Talk </p>
+                <p className='py-2 px-8 lg:py-3 text-white bg-[#FF0909] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center'> Let&apos;s Talk </p>
            </div>
       </div>
     </div>
