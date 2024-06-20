@@ -28,8 +28,7 @@ export const Navigation = () => {
   return (
     <>
     <header
-      className={`fixed w-full flex items-center justify-between top-0 px-[20px] md:px-[30px] gap-x-[60px] xl:px-[97px] ${scrollPosition ? 'bg-black' : ' bg-opacity-1  bg-transparent'}`}
-      style={{ zIndex: 20, transition: 'background-color 0.3s' }}
+      className={`fixed w-full flex items-center justify-between top-0 px-[20px] md:px-[30px] gap-x-[60px] bg-black xl:px-[97px] z-50`}
     >
 
         <Link href={"/"}>
@@ -92,7 +91,7 @@ export const Navigation = () => {
         >
           <div
             className={`w-full h-[3px] rounded-[15px] bg-white absolute z-50 ${
-              hamburger ? "top-[50%]" : "top-[15%]"
+              hamburger ? "top-[50%] h-[10px]" : "top-[15%]"
             } left-0`}
             style={
               hamburger
@@ -122,23 +121,31 @@ export const Navigation = () => {
       </header>
 
       <ul
-        className={`flex flex-col fixed w-full ${
-          hamburger ? "top-[100px] h-[100vh]" : "top-[-400%] h-fit"
+        className={`flex flex-col fixed w-full z-50 ${
+          hamburger ? "top-[90px] h-[100vh]" : "top-[-400%] h-fit"
         } text-center text-white bg-black w-full h-[100vh] left-0`}
         style={{ transition: "all 0.5s ease-in" }}
       >
-        <li className="py-[10px] bg-black">
+        <li className="py-[10px] bg-black" onClick={() => {
+            setHamburger((prevVal: boolean) => !prevVal);
+          }}>
           <Link href={"/"}>Home</Link>
         </li>
-        <li className="py-[10px] bg-black">
+        <li className="py-[10px] bg-black"onClick={() => {
+            setHamburger((prevVal: boolean) => !prevVal);
+          }}>
           <Link href={"/about"}>About</Link>
         </li>
-        <li className="py-[10px] bg-black">
+        <li className="py-[10px] bg-black"onClick={() => {
+            setHamburger((prevVal: boolean) => !prevVal);
+          }}>
           <Link href={"/services"} className="py-[10px]">
             Services
           </Link>
         </li>
-        <li className="py-[10px] bg-black">
+        <li className="py-[10px] bg-black"onClick={() => {
+            setHamburger((prevVal: boolean) => !prevVal);
+          }}>
           <Link href={"/career"} className="py-[10px]">
             Career
           </Link>
@@ -148,7 +155,9 @@ export const Navigation = () => {
               <Link
                 href={"/contact"}
                 style={pathname.includes("/events") ? active : {}}
-              >
+                onClick={() => {
+                  setHamburger((prevVal: boolean) => !prevVal);
+                }}>
                 Contact us
               </Link>
             </li>
