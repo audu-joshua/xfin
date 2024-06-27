@@ -5,7 +5,7 @@ export function GraphicServices() {
     <div className='z-30 pt-10 md:pt-20 pb-10 px-[20px] md:px-[30px] xl:px-[97px] bg-white'>
       <div className='text-white md:w-[65%]'>
            <h2 className=' text-2xl md:text-4xl lg:text-5xl font-bold py-4 text-[#FF0909]'> Our Graphic Design Services </h2>    
-           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal text-black'>Get comprehensive graphic design services that cater for your brand requirements.</p> 
+           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal text-black'>Our creative experts use cutting-edge design tools and trends to offer a complete range of graphic design services customized to fit your brand requirements.</p> 
         </div>   
 
            <div className='my-8 md:flex md:justify-between'>
@@ -15,18 +15,18 @@ export function GraphicServices() {
                 <div className='w-full'>
                   <div>
                     <h2 className=' text-xl md:text-3xl lg:text-4xl font-bold py-4 text-[#FF0909]'>Brand Identity</h2>
-                    <p className='text-black'>We offer all-inclusive branding for prospects who would like to engage with their target audience in a more effective way to pass the right brand message.</p>
+                    <p className='text-black'>We offer consistent and compelling visual branding that makes a strong impression. Our services include logo design, business cards, letterheads and branding styles guides that reflect your company’s ethos and message. </p>
                   </div>
 
                   <div>
-                    <h2 className=' text-xl md:text-3xl lg:text-4xl font-bold py-4 text-[#FF0909]'>Logo Design</h2>
-                    <p className='text-black'>Get a face for your brand, business, or organization. Our team of creative brand designers are always on the standby to craft you an appealing logo that resonates with your brand values.
+                    <h2 className=' text-xl md:text-3xl lg:text-4xl font-bold py-4 text-[#FF0909]'>Digital Design</h2>
+                    <p className='text-black'>Amplify your online presence with high-quality graphics optimized for the web. We craft website graphics, social media visuals, email templates and digital ads that enhance user experience and drive engagement. 
 </p>
                   </div>
 
                   <div>
-                    <h2 className=' text-xl md:text-3xl lg:text-4xl font-bold py-4 text-[#FF0909]'>Poster Design</h2>
-                    <p className='text-black'>Gain traction with high-fidelity social media posters for your campaign on several social media platforms. Engage with your audience on a personal level with poster designs that fit their preference.</p>
+                    <h2 className=' text-xl md:text-3xl lg:text-4xl font-bold py-4 text-[#FF0909]'>Package Design</h2>
+                    <p className='text-black'>Make your products stand out on the shelf with innovative and appealing packaging designs that tell the story of your brand and appeal to customer’s emotions.</p>
                   </div>
                 </div>
            </div>

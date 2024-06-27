@@ -12,10 +12,10 @@ export default function Testimonial() {
 
     <div className=' py-5 '>
             <h2 className='text-[#FB2B30] text-[32px] md:text-[34px] lg:text-5xl font-bold leading-none'>
-            We can help you smash your business goals
+            Boost Your Business Performance
             </h2>
             <p className='text-black py-3 font-medium text-sm md:text-base lg:text-lg'>
-            Explore our various service to improve your brand experience
+            Leverage our tech expertise to drive growth and sales
             </p>
             </div>
         </div>

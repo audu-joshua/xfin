@@ -37,8 +37,8 @@ export default function Hero() {
     style={isLargeScreen ? style.bgimageDesktop : style.bgimageMobile}
     >
       <div className='text-white'>
-           <h1 className=' text-4xl md:text-6xl lg:text-7xl font-bold py-4'> Website Design </h1>    
-           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal'>Improve your brand recognition with appealing and interactive website design to attract the right prospects to your business.</p>    
+           <h1 className=' text-4xl md:text-6xl lg:text-8xl font-bold py-4'> Pixel Genius </h1>    
+           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[55%] font-normal'>Where Ai-Powered creativity meets digital innovation. Transforming brands with intelligent design.</p>    
 
            <div className='my-8'>
                 <p className='py-2 px-8 lg:py-3 text-white bg-[#FF0909] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center'> Learn More </p>

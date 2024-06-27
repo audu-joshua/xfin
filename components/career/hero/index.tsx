@@ -9,7 +9,7 @@ export default function CareerHero() {
             <p className=' text-white py-4 text-base md:text-lg lg:text-2xl'>And we are here to appreciate it decently.</p>
             
             <div className='my-8'>
-                <p className='py-2 px-8 lg:py-3 text-white bg-[#FF0909] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center'> Join our Team </p>
+                <p className='py-2 px-8 lg:py-3 text-white bg-[#B17A39] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center'> Join our Team </p>
            </div>
         </div>
         <div className='grid md:w-[40%] gap-2 justify-center grid-cols-3 items-center'>

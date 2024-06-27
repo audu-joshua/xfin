@@ -36,9 +36,9 @@ export default function AboutHero() {
     <div className=' z-30 py-40 px-[20px] md:px-[30px] xl:px-[97px]' 
     style={isLargeScreen ? style.bgimageDesktop : style.bgimageMobile}
     >
-      <div className='text-white'>
+      <div className='text-white lg:-mt-16'>
            <h1 className=' text-4xl md:text-6xl lg:text-7xl font-bold py-4'> We are Trusted </h1>    
-           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal'>We provide top-notch tech and branding solutions to clients all over the world. With years of experience in the industry, we have helped many businesses grow and achieve their goals by delivering innovative and scalable brand solutions.</p>    
+           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[80%] font-normal'>At XIFIN Enterprise,  we’re a team of innovators passionate about harnessing technology to drive business success. With combined expertise and a customer-centric approach, we deliver cutting-edge solutions and dedicated support. Our values prioritize excellence, integrity, and customer satisfaction. We’re committed to staying ahead of the curve and making a positive impact. Trust us to shape the future of your business. </p>    
 
            <div className='my-8'>
                 <p className='py-2 px-8 lg:py-3 text-white bg-[#FF0909] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center'> Let’s Talk </p>

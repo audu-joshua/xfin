@@ -5,7 +5,7 @@ export function WebServices() {
     <div className='z-30 pt-10 md:pt-20 pb-10 px-[20px] md:px-[30px] xl:px-[97px] bg-white'>
       <div className='text-white md:w-[65%]'>
            <h2 className=' text-2xl md:text-4xl lg:text-5xl font-bold py-4 text-[#FF0909]'> Our Web Development Services </h2>    
-           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal text-black'>If you need end-to-end expertise and assistance in digital product design and development, we are here to help!</p> 
+           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal text-black'>We provide a range of web development services to help businesses establish a strong online presence and achieve their digital goals.</p> 
         </div>   
 
            <div className='my-8 md:flex md:justify-between'>
@@ -15,18 +15,18 @@ export function WebServices() {
                 <div className='w-full'>
                   <div>
                     <h2 className=' text-xl md:text-3xl lg:text-4xl font-bold py-4 text-[#FF0909]'>Frontend Dev.</h2>
-                    <p className='text-black'>Whether you&apos;re looking to build a new backend infrastructure from scratch or enhance your existing system, we&apos;ve got you covered. Let us handle the technical complexities while you focus on growing your business.</p>
+                    <p className='text-black'>Creating visually appealing and user-friendly interfaces that enhance the user experience.</p>
                   </div>
 
                   <div>
                     <h2 className=' text-xl md:text-3xl lg:text-4xl font-bold py-4 text-[#FF0909]'>Backend Dev.</h2>
-                    <p className='text-black'>Get standard app design for your every project. We have a dedicated team to handle your Android and iOS app design from inception to launch.
+                    <p className='text-black'>Implementing robust backend systems to ensure smooth functionality and performance.
 </p>
                   </div>
 
                   <div>
                     <h2 className=' text-xl md:text-3xl lg:text-4xl font-bold py-4 text-[#FF0909]'>Web Hosting</h2>
-                    <p className='text-black'>With our years of experience and dedication to excellence, we&apos;ll help you build a reliable, high-performance hosting environment that will support your website&apos;s growth and success. Let&apos;s work together to bring your vision to life and make your online presence shine.
+                    <p className='text-black'>Premium web hosting and a full suite of digital solutions to enhance your online presence and drive business success.
 </p>
                   </div>
                 </div>
