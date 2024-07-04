@@ -35,7 +35,7 @@ export default function Branding () {
 
         <div>
             <h2 className='text-[#FB2B30] text-2xl md:text-3xl lg:text-4xl font-bold py-6'> Crypto Exchange </h2>
-            <p className=' text-[black]'> WWe optimize your crypto exchange and wallet performance with expert diagnostics and solutions. Our services include exchange setup, wallet integration, smart contract auditing, and security enhancements, ensuring seamless and secure crypto transactions.  </p>
+            <p className=' text-[black]'> We optimize your crypto exchange and wallet performance with expert diagnostics and solutions. Our services include exchange setup, wallet integration, smart contract auditing, and security enhancements, ensuring seamless and secure crypto transactions.  </p>
             <Link href="/services/crypto" className=' cursor-pointer'>
             <p className='bg-[rgb(255,9,9)] text-center p-4 px-8 rounded-full shadow-2xl my-4 shadow-[#FF0909] md:w-1/2 text-white'> Learn More </p>
             </Link>

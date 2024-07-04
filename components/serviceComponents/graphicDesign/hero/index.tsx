@@ -2,7 +2,7 @@ import React from 'react'
 
 export function GraphicHero() {
   return (
-    <div className=' z-30 py-40 px-[20px] md:px-[30px] xl:px-[97px] bg-[#FB2B30]'>
+    <div className=' z-30 py-40 px-[20px] md:px-[30px] mt-[-30px] xl:px-[97px] bg-[#FB2B30]'>
       <div className='text-white'>
            <h1 className=' text-4xl md:text-6xl lg:text-7xl font-bold py-4'> Graphic Design </h1>    
            <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal'>Visuals speak volumes and in the fast-paced digital world, they often serve as a frontline of your brand identity. We specialize in harnessing the power of visual communication to create impactful and memorable graphics that resonate with your audience.  </p>    

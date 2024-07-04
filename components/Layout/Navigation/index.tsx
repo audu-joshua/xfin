@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -11,32 +11,20 @@ const active = {
 
 export const Navigation = () => {
   const [hamburger, setHamburger] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <>
-    <header
-      className={`fixed w-full flex items-center justify-between top-0 px-[20px] md:px-[30px] gap-x-[60px] bg-black xl:px-[97px] z-50`}
-    >
-
+      <header
+        className={`fixed w-full flex items-center justify-between top-0 px-[20px] md:px-[30px] gap-x-[60px] bg-black xl:px-[97px] z-50`}
+      >
         <Link href={"/"}>
           <img
             src={"/images/logo.svg"}
             alt="logo"
             height={"120px"}
             width={"100px"}
+            className='h-[70px] md:h-[120px]'
           />
         </Link>
 
@@ -82,9 +70,8 @@ export const Navigation = () => {
           </ul>
         </nav>
 
-
         <div
-          className="sm:hidden relative w-[49px] h-[49px] p-[5px] overflow-hidden"
+          className="sm:hidden relative w-[45px] h-[35px] p-[4px] overflow-hidden"
           onClick={() => {
             setHamburger((prevVal: boolean) => !prevVal);
           }}
@@ -122,8 +109,8 @@ export const Navigation = () => {
 
       <ul
         className={`flex flex-col fixed w-full z-50 ${
-          hamburger ? "top-[90px] h-[100vh]" : "top-[-400%] h-fit"
-        } text-center text-white bg-black w-full h-[100vh] left-0`}
+          hamburger ? "top-[70px] h-[100vh]" : "top-[-400%] h-fit"
+        } text-center text-white bg-black left-0`}
         style={{ transition: "all 0.5s ease-in" }}
       >
         <li className="py-[10px] bg-black" onClick={() => {
@@ -131,37 +118,39 @@ export const Navigation = () => {
           }}>
           <Link href={"/"}>Home</Link>
         </li>
-        <li className="py-[10px] bg-black"onClick={() => {
+        <li className="py-[10px] bg-black" onClick={() => {
             setHamburger((prevVal: boolean) => !prevVal);
           }}>
           <Link href={"/about"}>About</Link>
         </li>
-        <li className="py-[10px] bg-black"onClick={() => {
+        <li className="py-[10px] bg-black" onClick={() => {
             setHamburger((prevVal: boolean) => !prevVal);
           }}>
           <Link href={"/services"} className="py-[10px]">
             Services
           </Link>
         </li>
-        <li className="py-[10px] bg-black"onClick={() => {
+        <li className="py-[10px] bg-black" onClick={() => {
             setHamburger((prevVal: boolean) => !prevVal);
           }}>
           <Link href={"/career"} className="py-[10px]">
             Career
           </Link>
         </li>
-
         <li className="bg-[#FF0909] mx-10 p-4 px-6 rounded-full shadow-2xl shadow-[#FF0909]">
-              <Link
-                href={"/contact"}
-                style={pathname.includes("/events") ? active : {}}
-                onClick={() => {
-                  setHamburger((prevVal: boolean) => !prevVal);
-                }}>
-                Contact us
-              </Link>
-            </li>
+          <Link
+            href={"/contact"}
+            style={pathname.includes("/events") ? active : {}}
+            onClick={() => {
+              setHamburger((prevVal: boolean) => !prevVal);
+            }}
+          >
+            Contact us
+          </Link>
+        </li>
       </ul>
+
+      
     </>
   );
-}
+};

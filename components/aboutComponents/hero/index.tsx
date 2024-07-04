@@ -33,7 +33,7 @@ export default function AboutHero() {
       }, []);
 
   return (
-    <div className=' z-30 py-40 px-[20px] md:px-[30px] xl:px-[97px]' 
+    <div className=' z-30 py-40 px-[20px] md:px-[30px] mt-[-30px] xl:px-[97px]' 
     style={isLargeScreen ? style.bgimageDesktop : style.bgimageMobile}
     >
       <div className='text-white lg:-mt-16'>

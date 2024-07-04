@@ -2,7 +2,6 @@
 import React, {useState, useEffect} from 'react'
 
 export default function Hero() {
-
     const style = {
         bgimageMobile: {
           background: 'url("./images/heromobile.png")  center bottom',
@@ -33,7 +32,7 @@ export default function Hero() {
       }, []);
 
   return (
-    <div className=' z-30 py-40 px-[20px] md:px-[30px] xl:px-[97px] self-end' 
+    <div className=' z-30 py-40 px-[20px] md:px-[30px] xl:px-[97px] self-end mt-[-30px]' 
     style={isLargeScreen ? style.bgimageDesktop : style.bgimageMobile}
     >
       <div className='text-white'>
@@ -41,10 +40,8 @@ export default function Hero() {
            <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[55%] font-normal'>Where Ai-Powered creativity meets digital innovation. Transforming brands with intelligent design.</p>    
 
            <div className='my-8'>
-                <p className='py-2 px-8 lg:py-3 text-white bg-[#FF0909] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center'> Learn More </p>
+                <p className='py-2 px-8 lg:py-3 text-white bg-[#FF0909] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center' onClick={() => console.log("I never Click am Wella")} > Learn More </p>
            </div>
-
-           
       </div>
     </div>
   )

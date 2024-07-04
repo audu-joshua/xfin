@@ -26,7 +26,7 @@ export default function Mission() {
     <div className='p-4 justify-center flex flex-col w-[60%]'>
         <h2 className=' text-2xl md:text-3xl lg:text-4xl font-bold text-[#FFFFFF] py-2'>Our  Vission</h2>
         <p className='text-[11px] text-[#FFFFFF] w-full md:text-base lg:text-lg'>
-        At Xifin Enterprise, we provide millions of employment opportunities for young adults in the future.
+        At Xifin Enterprise, we envision a future where technology empowers millions of young adults to thrive in a world of endless employment opportunities and innovative possibilities.
         </p>
 
         <div className='md:flex md:gap-4 w-[70%] my-4 justify-between hidden py-4'>

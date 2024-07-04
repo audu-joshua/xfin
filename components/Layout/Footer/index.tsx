@@ -24,6 +24,52 @@ export function Footer() {
             </div>
           </div>
 
+          <div className=" md:hidden text-center">
+            <p className="font-semibold text-white text-[26px]">Follow Us</p>
+            <ul className="mt-[20px] flex px-16 justify-between gap-y-[15px]">
+              <li>
+                <Link href="">
+                  <div className="flex items-center gap-x-[10px] sm:gap-x-[15px]">
+                    <img
+                      src="/images/instagram.svg"
+                      alt="instagram"
+                      width={"34px"}
+                      height={"24px"}
+                    />
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link href="">
+                  {" "}
+                  <div className="flex items-center gap-x-[10px] sm:gap-x-[15px]">
+                    <img
+                      src="/images/linkedin.svg"
+                      alt="Linkedin"
+                      width={"34px"}
+                      height={"24px"}
+                    />
+                  </div>
+                </Link>
+              </li>
+              
+              <li>
+                <Link href="">
+                  {" "}
+                  <div className="flex items-center gap-x-[10px] sm:gap-x-[15px]">
+                    <img
+                      src="/images/facebook.svg"
+                      alt="facebook"
+                      width={"34px"}
+                      height={"24px"}
+                    />
+                  </div>
+                </Link>
+              </li>
+              
+            </ul>
+          </div>
+
 
             <div>
             <ul className="hidden lg:flex justify-center gap-8">
@@ -77,7 +123,7 @@ export function Footer() {
           
           
         </section>
-        <section className="text-white grid grid-cols-3 gap-x-[15px] sm:gap-x-[30px] mt-[73px] lg:mt-0">
+        <section className="text-white flex justify-between px-8 gap-x-[15px] sm:gap-x-[30px] mt-[73px] lg:mt-0">
           <div>
             <p className="font-semibold text-[18px]">Quick Links</p>
             <ul className="mt-[20px] flex flex-col gap-y-[15px]">
@@ -92,54 +138,6 @@ export function Footer() {
               </li>{" "}
               <li>
                 <Link href="/learning">Career</Link>
-              </li>
-              
-            </ul>
-          </div>
-          <div>
-            <p className="font-semibold text-[18px]">Follow Us</p>
-            <ul className="mt-[20px] flex flex-col gap-y-[15px]">
-              <li>
-                <Link href="">
-                  <div className="flex items-center gap-x-[10px] sm:gap-x-[15px]">
-                    <img
-                      src="/images/instagram.svg"
-                      alt="instagram"
-                      width={"24px"}
-                      height={"24px"}
-                    />
-                    <p>Instagram</p>
-                  </div>
-                </Link>
-              </li>
-              <li>
-                <Link href="">
-                  {" "}
-                  <div className="flex items-center gap-x-[10px] sm:gap-x-[15px]">
-                    <img
-                      src="/images/linkedin.svg"
-                      alt="Linkedin"
-                      width={"24px"}
-                      height={"24px"}
-                    />
-                    <p>LinkedIn</p>
-                  </div>
-                </Link>
-              </li>
-              
-              <li>
-                <Link href="">
-                  {" "}
-                  <div className="flex items-center gap-x-[10px] sm:gap-x-[15px]">
-                    <img
-                      src="/images/facebook.svg"
-                      alt="facebook"
-                      width={"24px"}
-                      height={"24px"}
-                    />
-                    <p>Facebook</p>
-                  </div>
-                </Link>
               </li>
               
             </ul>

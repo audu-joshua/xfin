@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function CareerHero() {
   return (
-    <div className='bg-[#FB2B30] py-20 md:py-28 lg:py-12 lg:pb-20 px-[20px] md:px-[30px] xl:px-[97px]'>
+    <div className='bg-[#FB2B30] mt-[-30px] py-20 md:py-28 lg:py-12 lg:pb-20 px-[20px] md:px-[30px] xl:px-[97px]'>
       <div className='flex md:justify-between flex-col-reverse md:flex-row'>
         <div className=' pt-10 md:pt-0 md:py-10 grid items-center md:w-[60%]'>
             <h1 className=' md:w-[85%] w-[100%] leading-[1.13] font-bold text-5xl md:6xl lg:text-8xl text-white'>Your talent matters for the world!</h1>
