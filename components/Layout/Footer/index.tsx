@@ -19,7 +19,7 @@ export function Footer() {
               className="w-[50%]"
             />
             <div className="font-[800] text-[16px] md:text-lg lg:text-2xl text-white">
-              <p>Xfin</p>
+              <p>Xifin</p>
               <p>Enterprise</p>
             </div>
           </div>
@@ -159,7 +159,7 @@ export function Footer() {
         className="py-[12px] flex justify-center mt-[100px]"
         style={{ borderTop: "1px solid #8B8B8B" }}
       >
-        <p className="font-medium text-white">&copy; Xfin Enterprise</p>
+        <p className="font-medium text-white">&copy; Xifin Enterprise</p>
       </div>
     </footer>
   );
