@@ -2,10 +2,8 @@
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import Image from 'next/image';
 import jude from '@/public/images/IMG_20230804_021813.png'
-import mail from '@/public/images/mail.png'
-import linkedin from '@/public/images/linkedin.png'
-import phone from '@/public/images/phone.png'
-import instagram from '@/public/images/instagram.png'
+import { BsPhone, BsInstagram, BsLinkedin, BsMailbox, } from 'react-icons/bs';
+import { FiMail } from 'react-icons/fi';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -43,7 +41,7 @@ const ContactForm = () => {
 
   return (
     <div className="grid grid-cols-1 md:flex md:flex-row lg:px-28 px-6 py-12 bg-white gap-8">
-  <form onSubmit={handleSubmit} className="md:w-[55%] md:pr-4 bg-[#FB2B30] bg-opacity-15 p-10 md:py-4 rounded-2xl">
+  <form onSubmit={handleSubmit} className="md:w-[55%] md:pr-4 bg-[#FB2B30] bg-opacity-15 p-10 md:py-4 rounded-2xl" id='contactUs'>
     <h3 className="text-[#FB2B30] text-2xl md:text-3xl font-bold pb-6 md:pb-4">Let&apos;s Talk</h3>
   
     {/* Name Input */}
@@ -139,35 +137,42 @@ const ContactForm = () => {
     <button type="submit" className="bg-[#FB2B30] text-white p-2 px-8 mt-4 rounded-full">Send</button>
   </form>
 
-  <div className="md:w-[45%] grid items-center relative">
+  <div className="md:w-[45%] grid items-center">
     {/* Image Container */}
-    <div className="relative rounded-2xl overflow-hidden">
+    <div className=" rounded-2xl grid items-end ">
       {/* Insert your image here */}
       <Image src={jude} alt="Your Image" className="w-full" />
       {/* Glassmorphic Overlay */}
-      <div className="absolute bottom-2 mx-4 rounded-xl md:bottom-6 w-full md:h-[35%] h-[40%] p-2 md:p-4 bg-white bg-opacity-40 backdrop-blur-sm">
-        <h4 className="text-lg md:text-xl font-semibold text-black text-center py-2">Jude Iria, CEO</h4>
-        <div className="grid md:grid-cols-2 gap-4 py-2">
-          <div className="flex text-black">
-          <Image src={mail} alt="Mail Adress" className='text-black '/>
-            <p className="px-4">judeiria3390@gmail.com</p>
+      <div className='absolute px-2 pb-2 pr-4 w-[90%] md:w-[40%]'>
+      <div className=" w-[100%] md:w-[91%] rounded-xl md:bottom-6 md:h-[35%] h-[40%] p-2 md:p-4 bg-white bg-opacity-40">
+        <h4 className="text-lg md:text-xl font-semibold text-black text-center ">Jude Iria, CEO</h4>
+        <div className="grid gap-4 py-2">
+          <div className='flex justify-between gap-4 items-center'>
+          <div className="flex items-center text-black cursor-pointer hover:animate-bounce">
+            <FiMail/>
+            <p className="px-1 text-sm md:text-base">judeiria3390@gmail.com</p>
           </div>
 
-          <div className="flex text-black">
-          <Image src={linkedin} alt="Linkedin"/>
-            <p className="px-4">Jude Iria</p>
-          </div>
-
-          <div className="md:flex hidden text-black">
-          <Image src={phone} alt="Phone Number"/>
-            <p className="px-4">+2349035240907</p>
-          </div>
-
-          <div className="md:flex hidden text-black">
-          <Image src={instagram} alt="Instagram"/>
-            <p className="px-4">Xifin Enterprise</p>
+          <div className="flex items-center text-black cursor-pointer hover:animate-bounce">
+            <BsLinkedin/>
+            <p className="px-1 text-sm md:text-base">Jude Iria</p>
           </div>
         </div>
+
+          
+        <div className='flex justify-between items-center gap-4'>
+          <div className="flex items-center text-black cursor-pointer hover:animate-bounce">
+          <BsPhone className='text-black '/>
+            <p className="px-1 text-sm md:text-base">+44 7378201108</p>
+          </div>
+
+          <div className="flex items-center text-black cursor-pointer hover:animate-bounce">
+            <BsInstagram/>
+            <p className="px-1 text-sm md:text-base">Xifin Enterprise</p>
+          </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </div>

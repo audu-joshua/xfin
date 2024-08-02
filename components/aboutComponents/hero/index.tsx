@@ -33,7 +33,7 @@ export default function AboutHero() {
       }, []);
 
   return (
-    <div className=' z-30 py-40 px-[20px] md:px-[30px] mt-[-30px] xl:px-[97px]' 
+    <div className=' z-30 grid items-end h-full md:h-screen py-24 px-[20px] md:px-[30px] mt-[-30px] xl:px-[97px]' 
     style={isLargeScreen ? style.bgimageDesktop : style.bgimageMobile}
     >
       <div className='text-white lg:-mt-16'>
@@ -44,6 +44,13 @@ export default function AboutHero() {
                 <p className='py-2 px-8 lg:py-3 text-white bg-[#FF0909] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center'> Let’s Talk </p>
            </div>
       </div>
+
+      <div className=' hidden lg:mt-4 md:grid grid-flow-col text-center  w-full border border-solid border-white border-opacity-35 justify-stretch'>
+              <p className=' p-4 border border-solid border-white text-white text-opacity-35 hover:text-opacity-100 hover:bg-[#2F2E2E] cursor-pointer text-base border-opacity-35'> Website Design </p>
+              <p className=' p-4 text-white text-opacity-35 border border-solid border-white hover:text-opacity-100 text-base border-opacity-35 hover:bg-[#2F2E2E] cursor-pointer'> Graphic Design </p>
+              <p className=' p-4 text-white text-opacity-35 hover:text-opacity-100 border border-solid border-white text-base border-opacity-35 hover:bg-[#2F2E2E] cursor-pointer'> Website Development </p>
+              <p className=' p-4 text-white text-opacity-35 border border-solid border-white hover:text-opacity-100 text-base border-opacity-35 hover:bg-[#2F2E2E] cursor-pointer'> Crypto Exchange </p>
+           </div>
     </div>
   )
 }

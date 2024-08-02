@@ -1,5 +1,4 @@
 interface TestimonialType {
-    title: string;
     description: string;
     name: string;
     img: string;
@@ -7,41 +6,24 @@ interface TestimonialType {
   
   export const TestomonialData: TestimonialType[] = [
     {
-      title: "Front End Dev",
       description:
-        "The first step to becoming a member of SV Investment is to register on our platform. This process is straightforward and requires you to provide basic information to create your account.",
-        name: "Audu joshua Adinoyi",
+        "The work environment is helpful in that it allowed me improve in my expertise through the use of effective analytical tools.",
+        name: "Babatunde Ayoola",
         img:'./images/CImg1.svg'
     },
     {
-        title: "Product Designer",
         description:
-          "The first step to becoming a member of SV Investment is to register on our platform. This process is straightforward and requires you to provide basic information to create your account.",
-          name: "Matilda Deborah",
+          "Working with Xifin Enterprise as a Designer has created series of enjoyable moments for me. I have been able to connect with like minds.",
+          name: "Victor Ebojieta",
           img:'./images/CImg4.svg'
     },
     {
-        title: "Back End Dev",
         description:
-          "The first step to becoming a member of SV Investment is to register on our platform. This process is straightforward and requires you to provide basic information to create your account.",
-          name: "Audu John Thomas",
+          "Working with Xifin has been thrilling. Their expertise and attention to detail resulted in a professional and visually appealing website. The team’s responsiveness and dedication to exceeded my expectation.",
+          name: "Diane Tuoyo",
           img:'./images/CImg6.svg'
     },
 
-    {
-      title: "COO",
-      description:
-        "The first step to becoming a member of SV Investment is to register on our platform. This process is straightforward and requires you to provide basic information to create your account.",
-        name: "Audu John Mary",
-        img:'./images/CImg8.svg'
-  },
-
-  {
-    title: "CEO",
-    description:
-      "The first step to becoming a member of SV Investment is to register on our platform. This process is straightforward and requires you to provide basic information to create your account.",
-      name: "Vicky John Mary",
-      img:'./images/CImg4.svg'
-},
+    
   ];
   

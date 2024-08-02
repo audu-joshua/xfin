@@ -13,8 +13,10 @@ export default function page() {
       <WebDevHero/>
       <WebServices/>
       <WebTechnologies/>
+      {/* 
       <Review/>
       <CarouselWithContent/>
+      */}
       <Blogs/>
       <ContactForm/>
     </div>

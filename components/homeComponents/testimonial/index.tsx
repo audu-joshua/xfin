@@ -11,7 +11,7 @@ export default function Testimonial() {
             />
 
     <div className=' py-5 '>
-            <h2 className='text-[#FB2B30] text-[32px] md:text-[34px] lg:text-5xl font-bold leading-none'>
+            <h2 className='text-black text-[32px] md:text-[34px] lg:text-5xl font-bold leading-none'>
             Boost Your Business Performance
             </h2>
             <p className='text-black py-3 font-medium text-sm md:text-base lg:text-lg'>
@@ -23,7 +23,7 @@ export default function Testimonial() {
 
         <div className='md:py-8 lg:py-12'>
             <div className='py-4 ' >
-            <h2 className='text-[#FB2B30] text-[32px] md:text-[34px] lg:text-5xl font-bold'>
+            <h2 className='text-black text-[32px] md:text-[34px] lg:text-5xl font-bold'>
                 Video Testimonials
             </h2>
             <p className='text-black font-medium text-sm md:text-base lg:text-lg'>

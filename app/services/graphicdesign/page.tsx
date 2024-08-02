@@ -15,8 +15,9 @@ export default function page() {
       <GraphicServices/>
       <Technologies/>
       <Benefits/>
-      <Review/>
+      {/*<Review/>
       <CarouselWithContent/>
+      */}
       <Blogs/>
       <ContactForm/>
     </div>

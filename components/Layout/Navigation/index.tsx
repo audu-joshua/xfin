@@ -16,7 +16,7 @@ export const Navigation = () => {
   return (
     <>
       <header
-        className={`fixed w-full flex items-center justify-between top-0 px-[20px] md:px-[30px] gap-x-[60px] bg-black xl:px-[97px] z-50`}
+        className={`fixed w-full flex items-center justify-between px-[20px] top-0 md:px-[30px] gap-x-[60px] bg-black xl:px-[97px] z-50`}
       >
         <Link href={"/"}>
           <img
@@ -24,11 +24,11 @@ export const Navigation = () => {
             alt="logo"
             height={"120px"}
             width={"100px"}
-            className='h-[70px] md:h-[120px]'
+            className='h-[70px] md:h-fit '
           />
         </Link>
 
-        <nav className="w-[70%] text-white xl:w-[55%] hidden sm:block">
+        <nav className="w-[70%]  text-white xl:w-[55%] hidden sm:block">
           <ul className="flex text-base items-center gap-x-[30px] justify-between">
             <li>
               <Link href={"/"} style={pathname === "/" ? active : {}}>
@@ -51,6 +51,18 @@ export const Navigation = () => {
                 Services
               </Link>
             </li>
+
+{/* 
+            <li>
+              <Link
+                href={"/blog"}
+                style={pathname.includes("/blog") ? active : {}}
+              >
+                Blogs
+              </Link>
+            </li>
+*/}
+
             <li>
               <Link
                 href={"/career"}
@@ -130,6 +142,15 @@ export const Navigation = () => {
             Services
           </Link>
         </li>
+        {/* 
+        <li className="py-[10px] bg-black" onClick={() => {
+            setHamburger((prevVal: boolean) => !prevVal);
+          }}>
+          <Link href={"/blog"} className="py-[10px]">
+            Blogs
+          </Link>
+        </li>
+        */}
         <li className="py-[10px] bg-black" onClick={() => {
             setHamburger((prevVal: boolean) => !prevVal);
           }}>
@@ -139,7 +160,7 @@ export const Navigation = () => {
         </li>
         <li className="bg-[#FF0909] mx-10 p-4 px-6 rounded-full shadow-2xl shadow-[#FF0909]">
           <Link
-            href={"/contact"}
+            href={"/contact"} 
             style={pathname.includes("/events") ? active : {}}
             onClick={() => {
               setHamburger((prevVal: boolean) => !prevVal);

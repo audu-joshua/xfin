@@ -10,10 +10,10 @@ export default function CareerValues() {
             <img
               src="./images/Cwho.svg"
               alt=""
-              className="w-[80%] bg-[#FB2B30] h-[100%] rounded-r-full border-r-8 border-solid border-[#FB2B30] " />
+              className="w-[80%] bg-black h-[100%] rounded-r-full border-r-8 border-solid border-black " />
           </div>
           <div className='md:px-6 md:py-4 p-10  justify-center flex flex-col md:w-[60%]'>
-            <h2 className=' text-3xl md:text-3xl lg:text-4xl font-bold text-[#FB2B30] py-2'>Who are We?</h2>
+            <h2 className=' text-3xl md:text-3xl lg:text-4xl font-bold text-black py-2'>Who are We?</h2>
             <p className='text-base grid gap-6 md:text-base font-normal text-black w-full'>
               <p>
               At XIFIN Enterprise, we are a team of innovators passionate about harnessing technology to drive business success.
@@ -36,7 +36,7 @@ export default function CareerValues() {
       </div>
 
       <div>
-        <h2 className=' text-3xl font-bold text-[#FB2B30] text-center pt-10'> Our values </h2>
+        <h2 className=' text-3xl font-bold text-black text-center pt-10'> Our values </h2>
         <div className='grid grid-cols-2 py-4 pt-8 gap-4 md:grid-cols-4'>
           <div className=''>
             <p className='py-3 px-8 lg:py-3 text-white bg-black text-sm md:text-lg lg:text-2xl font-normal rounded-full w-full text-center justify-center'> Partnership </p>
@@ -56,13 +56,13 @@ export default function CareerValues() {
         </div>
 
         <div>
-          <h3 className=' text-3xl font-bold text-[#FB2B30] text-center pt-10'> Numbers </h3>
+          <h3 className=' text-3xl font-bold text-black text-center pt-10'> Numbers </h3>
           <div className='grid py-8'>
-            <p className='text-[#FB2B30] py-6 text-center text-3xl md:text-4xl justify-center lg:text-6xl font-bold  flex'>
+            <p className='text-black py-6 text-center text-3xl md:text-4xl justify-center lg:text-6xl font-bold  flex'>
               200+ <em className=' text-black text-[16px] md:text-[24px]  w-[30%] leading-none md:w-fit md:self-center  font-medium not-italic'> Experts in the field </em>
             </p>
 
-            <p className='text-[#FB2B30] py-4 text-center text-3xl md:text-4xl justify-center lg:text-6xl font-bold  flex'>
+            <p className='text-black py-4 text-center text-3xl md:text-4xl justify-center lg:text-6xl font-bold  flex'>
               6+ <em className=' text-black text-[16px] md:text-[24px]  w-[30%] leading-none block md:w-fit md:self-center font-medium not-italic'> Years on the Market </em>
             </p>
           </div>

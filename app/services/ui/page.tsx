@@ -16,8 +16,10 @@ export default function page() {
       <OurUiUxServices/>
       <UITechnologies/>
       <Benefits/>
+      {/* 
       <Review/>
       <CarouselWithContent/>
+      */}
       <Blogs/>
       <ContactForm/>
     </div>

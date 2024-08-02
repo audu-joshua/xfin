@@ -35,13 +35,13 @@ export default function CareerTestimonials() {
   return (
     <div className='px-[20px] md:px-[30px] xl:px-[97px] bg-[#e3e1e1]'>
       <div className=' flex justify-between items-center py-4 md:pr-12'>
-        <h1 className='text-[#FB2B30] text-xl font-bold md:text-3xl lg:text-4xl'> Teammates’ testimonials </h1>
+        <h1 className='text-black text-xl font-bold md:text-3xl lg:text-4xl'> Teammates’ testimonials </h1>
         <div className='flex gap-3 md:gap-5'>
-        <div className='bg-[#FB2B30] cursor-pointer p-2 md:p-4 flex justify-center items-center h-fit rounded-full' onClick={prevTestimonial}>
+        <div className='bg-black cursor-pointer p-2 md:p-4 flex justify-center items-center h-fit rounded-full' onClick={prevTestimonial}>
         <FaArrowLeft className='text-white'/>
         </div>
 
-        <div className='bg-[#FB2B30] cursor-pointer p-2 md:p-4 flex justify-center items-center h-fit rounded-full' onClick={nextTestimonial}>
+        <div className='bg-black cursor-pointer p-2 md:p-4 flex justify-center items-center h-fit rounded-full' onClick={nextTestimonial}>
         <FaArrowRight className='text-white'/>
         </div> 
         </div>
@@ -56,12 +56,12 @@ export default function CareerTestimonials() {
                 <p className=" text-base font-light">{item.description}</p>
               </div>
               <h3 className=" font-bold text-black">{item.name}</h3>
-              <h2 className="font-semibold mb-2 text-black">{item.title}</h2>
             </div>
           </div>
         ))}
 
       </div>
+      
     </div>
   )
 }

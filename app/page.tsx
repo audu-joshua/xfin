@@ -16,8 +16,8 @@ export default function Home() {
       <Testimonial/>
       <Mission/>
       <Branding/>
-      <Review/>
-      <CarouselWithContent/>
+      {/*<Review/>
+      <CarouselWithContent/> */}
       <Blogs/>
       <Career/>
       <ContactForm/>
