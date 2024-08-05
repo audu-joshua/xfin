@@ -61,12 +61,12 @@ export default function Mission() {
     </div>
 </div>
 
-<div className='md:hidden grid bg-black text-white my-8 rounded-b-2xl'>
-<div className='overflow-hidden '>
+<div className='md:hidden grid bg-black text-white my-8 rounded-b-2xl w-fit'>
+<div className='overflow-hidden'>
         <img
             src="./images/pexels-ketut-subiyanto-4560080.png"
             alt=""
-            className=" h-[100%]"
+            className=" h-[100%] rounded-lg"
         />
     </div>
     <div className='px-4 flex flex-col'>
@@ -76,9 +76,9 @@ export default function Mission() {
         </p>
 
         <div className='flex w-full my-4 justify-between py-4'>
-            <p className='bg-[#FF0909] p-2 px-4 rounded-full shadow-2xl shadow-[#FF0909]'> Innovate </p>
-            <p className='bg-[#FF0909] p-2 px-4 rounded-full shadow-2xl shadow-[#FF0909]'> Accelerate </p>
-            <p className='bg-[#FF0909] p-2 px-4 rounded-full shadow-2xl shadow-[#FF0909]'> Thrive </p>
+            <p className='bg-[#FF0909] p-2 px-3 rounded-full shadow-2xl shadow-[#FF0909]'> Innovate </p>
+            <p className='bg-[#FF0909] p-2 px-3 rounded-full shadow-2xl shadow-[#FF0909]'> Accelerate </p>
+            <p className='bg-[#FF0909] p-2 px-3 rounded-full shadow-2xl shadow-[#FF0909]'> Thrive </p>
         </div>
     </div>
 </div>
