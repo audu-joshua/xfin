@@ -14,9 +14,9 @@ export function Footer() {
             <div className=" text-white">
               <h3 className=" font-bold text-xl"> Get to our Newsletter </h3>
               <p className=" font-normal text-xs py-2"> Be the first to receive update when they roll out. </p>
-              <div className="py-2 my-4 px-2 rounded-xl w-full flex bg-white justify-between">
-              <input placeholder="Email Address" className=" focus:outline-none placeholder:text-black pl-2"/>
-              <p className="py-2 rounded-2xl text-white px-6 bg-[#FF0909] "> Subscribe </p>
+              <div className="py-2 gap-4 my-4 px-2 rounded-xl w-full flex bg-white justify-between">
+              <input placeholder="Email Address" className=" w-[60%] focus:outline-none placeholder:text-black pl-2 text-black"/>
+              <p className="py-2 rounded-2xl w-[40%] text-white px-4 bg-[#FF0909] "> Subscribe </p>
             </div>
             </div>
 
@@ -107,11 +107,11 @@ export function Footer() {
             <div className="text-center w-full">
 
             <div className="grid items-center pt-4">
-            <div className="py-2 my-4 px-2 rounded-xl w-full flex bg-white justify-between">
-              <input placeholder="Email Address" className=" focus:outline-none placeholder:text-black pl-2"/>
-              <p className="py-2 rounded-2xl text-white px-6 bg-[#FF0909] "> Subscribe </p>
+            <div className="py-2 my-4 px-2 gap-4 rounded-xl w-full flex bg-white justify-between">
+              <input placeholder="Email Address" className=" focus:outline-none placeholder:text-black pl-2 w-[70%] text-black"/>
+              <p className="py-2 rounded-2xl cursor-pointer hover:bg-black text-white px-6 bg-[#FF0909] w-[30%]"> Subscribe </p>
             </div>
-            <ul className="mt-[20px] flex gap-6 justify-center">
+            <ul className="mt-[20px] flex justify-between">
               <li>
                 <Link href="" className="grid gap-4">
                   <div className="flex items-center gap-x-[10px] sm:gap-x-[15px] justify-center">
@@ -182,16 +182,16 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-semibold text-[22px]">Blogs</p>
+            <p className="font-semibold text-[22px]">Faq</p>
             <ul className="mt-[20px] flex flex-col gap-y-[15px]">
               <li>
-                <Link href="/">Post #1</Link>
+                <Link href="/"> Timeframe </Link>
               </li>
               <li>
-                <Link href="/about">Post #2</Link>
+                <Link href="/about"> Budget </Link>
               </li>
               <li>
-                <Link href="/invest">Post #3</Link>
+                <Link href="/invest">Scope</Link>
               </li>
             </ul>
           </div>

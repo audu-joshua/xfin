@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={montserrat.className}>
       <Navigation />
       <body className={`mt-[100px] ${montserrat.className}`}>{children}</body>
       <Footer />

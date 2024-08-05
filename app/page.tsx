@@ -5,6 +5,7 @@ import Branding from "@/components/homeComponents/branding";
 import Review from "@/components/homeComponents/reviews";
 import CarouselWithContent from "@/components/homeComponents/reviews/carousel";
 import Blogs from "@/components/homeComponents/blogs/indes";
+import { Faq } from "@/components/homeComponents/faq";
 import Career from "@/components/homeComponents/joinus";
 import ContactForm from "@/components/homeComponents/form";
 
@@ -17,8 +18,9 @@ export default function Home() {
       <Mission/>
       <Branding/>
       {/*<Review/>
-      <CarouselWithContent/> */}
-      <Blogs/>
+      <CarouselWithContent/> 
+      <Blogs/>*/}
+      <Faq/>
       <Career/>
       <ContactForm/>
    </>
