@@ -66,7 +66,7 @@ export default function Mission() {
         <img
             src="./images/pexels-ketut-subiyanto-4560080.png"
             alt=""
-            className=" h-[100%] rounded-lg"
+            className="rounded-lg"
         />
     </div>
     <div className='px-4 flex flex-col'>
