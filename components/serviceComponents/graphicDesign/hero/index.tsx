@@ -39,8 +39,9 @@ export function GraphicHero() {
            <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal'>Visuals speak volumes and in the fast-paced digital world, they often serve as a frontline of your brand identity. We specialize in harnessing the power of visual communication to create impactful and memorable graphics that resonate with your audience.  </p>    
 
            <div className='my-8'>
-                <Link className='py-2 px-8 lg:py-3 text-white bg-[#D47F1A] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center' href="#"> Let’s Talk 
-                </Link>
+           <p className='py-2 cursor-pointer px-8 lg:py-3 text-white bg-[#FF7F09] text-sm md:text-lg lg:text-2xl font-normal rounded-full w-fit text-center justify-center transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-[#FF5710]'>
+  Let’s Talk
+</p>
            </div>
       </div>
     </div>

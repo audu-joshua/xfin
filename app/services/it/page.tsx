@@ -14,8 +14,10 @@ export default function page() {
       <ITServices/>
       <ITTechnologies/>
       <Benefits/>
-      <Review/>
+      {/*
+      <Review/> 
       <Blogs/>
+      */}
       <ContactForm/>
     </div>
   )

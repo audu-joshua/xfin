@@ -25,12 +25,10 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-    background-color: black;
-    font-family: 'Montserrat', Arial, sans-serif;
-
+  background-color: black;
+  font-family: 'Montserrat', Arial, sans-serif;
+  @apply scroll-smooth; /* Add smooth scrolling */
 }
-
-
 
 @layer utilities {
   .text-balance {

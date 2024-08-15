@@ -2,11 +2,11 @@ import React from 'react'
 
 export default function CareerValues() {
   return (
-    <div className='py-20 md:py-28 lg:py-12 px-[20px] md:px-[30px] xl:px-[97px] bg-[#e3e1e1]'>
+    <div id='values' className='py-20 md:py-28 lg:py-12 px-[20px] md:px-[30px] xl:px-[97px] bg-[#e3e1e1]'>
 
-      <div className='md:-mt-24 -mt-32'>
+      <div  className='md:-mt-24 -mt-32'>
         <div className='flex bg-white rounded-3xl '>
-          <div className='overflow-hidden hidden rounded-2xl md:flex w-[40%] self-end justify-start'>
+          <div  className='overflow-hidden hidden rounded-2xl md:flex w-[40%] self-end justify-start'>
             <img
               src="./images/Cwho.svg"
               alt=""
@@ -14,7 +14,7 @@ export default function CareerValues() {
           </div>
           <div className='md:px-6 md:py-4 p-10  justify-center flex flex-col md:w-[60%]'>
             <h2 className=' text-3xl md:text-3xl lg:text-4xl font-bold text-black py-2'>Who are We?</h2>
-            <p className='text-base grid gap-6 md:text-base font-normal text-black w-full'>
+            <p  className='text-base grid gap-6 md:text-base font-normal text-black w-full'>
               <p>
               At XIFIN Enterprise, we are a team of innovators passionate about harnessing technology to drive business success.
               </p>

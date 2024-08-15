@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaLinkedin, FaEnvelope, FaTiktok, FaTwitter } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope, FaTiktok, FaTwitter, FaFacebook, FaInstagram } from 'react-icons/fa';
 
 
 export default function Team() {
@@ -53,19 +53,19 @@ export default function Team() {
     <p className='text-[#000000] py-1 text-center text-sm md:text-base md:pt-0 pb-3'>CEO, Xifin Enterprise</p>
     <div className="flex py-4 pt-8 w-full justify-between px-[60px] lg:px-[20px] md:px-[60px] md:py-0 md:pt-0 ">
       
-     <a href="linked-in-url-1" className='bg-black h-fit p-2 text-white rounded-full'>
+     <a href="https://www.linkedin.com/in/jude-iria" className='bg-black h-fit p-2 text-white rounded-full'>
        <FaLinkedin size={24} />
      </a>
-     <a href="email-address-1" className='bg-black h-fit p-2 rounded-full'>
+     <a href="mailto:JudeIria3390@gmail.com" className='bg-black h-fit p-2 rounded-full'>
        <FaEnvelope className='' size={24} />
      </a>
 
-     <a href="email-address-1" className='bg-black h-fit p-2 rounded-full'>
+     <a href="https://x.com/coachjude_XER" className='bg-black h-fit p-2 rounded-full'>
        <FaTwitter size={24} />
      </a>
 
-     <a href="email-address-1" className='bg-black h-fit p-2 rounded-full'>
-       <FaTiktok size={24} />
+     <a href="https://www.facebook.com/Coach.jude.iria?mibextid=LQQJ4d" className='bg-black h-fit p-2 rounded-full'>
+       <FaFacebook size={24} />
      </a>
    </div>
   </div>
@@ -99,19 +99,19 @@ export default function Team() {
     <p className='text-[#000000] py-1 text-sm md:text-base md:pt-0 pb-3'>Brand Designer</p>
     <div className="flex py-4 pt-8 w-full justify-between px-[60px] lg:px-[20px] md:px-[60px] md:py-0 md:pt-0">
       
-     <a href="linked-in-url-1" className='bg-black h-fit p-2 text-white rounded-full'>
+     <a href="https://www.linkedin.com/in/oluwafemi-ernest-7611b3240/" className='bg-black h-fit p-2 text-white rounded-full'>
        <FaLinkedin size={24} />
      </a>
-     <a href="email-address-1" className='bg-black h-fit p-2 rounded-full'>
+     <a href="mailto:ernestoluwafemi14@gmail.com" className='bg-black h-fit p-2 rounded-full'>
        <FaEnvelope className='' size={24} />
      </a>
 
-     <a href="email-address-1" className='bg-black h-fit p-2 rounded-full'>
+     <a href="https://x.com/ernnyolu?s=09" className='bg-black h-fit p-2 rounded-full'>
        <FaTwitter size={24} />
      </a>
 
-     <a href="email-address-1" className='bg-black p-2 h-fit rounded-full'>
-       <FaTiktok size={24} />
+     <a href="https://www.instagram.com/your.brand.designer/" className='bg-black p-2 h-fit rounded-full'>
+       <FaInstagram size={24} />
      </a>
    </div>
   </div>
@@ -122,19 +122,19 @@ export default function Team() {
     <p className='text-[#000000] py-1 text-sm md:text-base md:pt-0 pb-3'> Web Developer</p>
     <div className="flex py-4 pt-8 w-full justify-between px-[60px] lg:px-[20px] md:px-[60px] md:py-0 md:pt-0">
       
-     <a href="linked-in-url-1" className='bg-black h-fit p-2 text-white rounded-full'>
+     <a href="https://www.linkedin.com/in/audu-joshua/" className='bg-black h-fit p-2 text-white rounded-full'>
        <FaLinkedin size={24} />
      </a>
-     <a href="email-address-1" className='bg-black h-fit p-2 rounded-full'>
+     <a href="mailto:empire4josh@gmail.com" className='bg-black h-fit p-2 rounded-full'>
        <FaEnvelope className='' size={24} />
      </a>
 
-     <a href="email-address-1" className='bg-black h-fit p-2 rounded-full'>
+     <a href="https://x.com/adinoyi_audu" className='bg-black h-fit p-2 rounded-full'>
        <FaTwitter size={24} />
      </a>
 
-     <a href="email-address-1" className='bg-black h-fit p-2 rounded-full'>
-       <FaTiktok size={24} />
+     <a href="https://www.instagram.com/auduempire/" className='bg-black h-fit p-2 rounded-full'>
+       <FaInstagram size={24} />
      </a>
    </div>
   </div>

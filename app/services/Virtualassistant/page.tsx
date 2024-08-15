@@ -14,8 +14,10 @@ export default function page() {
       <VAServices/>
       <VATechnologies/>
       <Benefits/>
-      <Review/>
+      {/*
+      <Review/> 
       <Blogs/>
+      */}
       <ContactForm/>
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Mission() {
   return (
-    <div className='bg-white lg:px-28 px-6 py-6'>
+    <div id='mission' className='bg-white lg:px-28 px-6 py-6 scroll-smooth'>
 
 <div className='hidden md:flex bg-[#FB2B30] rounded-2xl '>
     <div className='p-4 justify-center flex flex-col w-[60%]'>

@@ -14,8 +14,10 @@ export default function page() {
       <CryptoServices/>
       <CryptoTechnologies/>
       <Benefits/>
-      <Review/>
+      {/*
+      <Review/> 
       <Blogs/>
+      */}
       <ContactForm/>
 
     </div>

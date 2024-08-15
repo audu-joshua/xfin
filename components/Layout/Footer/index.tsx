@@ -27,7 +27,7 @@ export function Footer() {
           
             <ul className="mt-[20px] grid gap-6">
               <li>
-                <Link href="" className="flex gap-4">
+                <Link href="https://www.instagram.com/xifin_enterprise/" className="flex gap-4">
                   <div className="flex items-center gap-x-[10px] sm:gap-x-[15px]">
                     <img
                       src="/images/instagram.svg"
@@ -40,7 +40,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="" className="flex gap-4">
+                <Link href="https://www.linkedin.com/company/xifin-enterprise/" className="flex gap-4">
                   {" "}
                   <div className="flex items-center gap-x-[10px] sm:gap-x-[15px]">
                     <img
@@ -55,7 +55,7 @@ export function Footer() {
               </li>
               
               <li>
-                <Link href="" className="flex gap-4">
+                <Link href="https://www.facebook.com/profile.php?id=61560354717006&mibextid=ZbWKwL" className="flex gap-4">
                   {" "}
                   <div className="flex items-center gap-x-[10px] sm:gap-x-[15px]">
                     <img
@@ -113,7 +113,7 @@ export function Footer() {
             </div>
             <ul className="mt-[20px] flex justify-between">
               <li>
-                <Link href="" className="grid gap-4">
+                <Link href="https://www.instagram.com/xifin_enterprise/" className="grid gap-4">
                   <div className="flex items-center gap-x-[10px] sm:gap-x-[15px] justify-center">
                     <img
                       src="/images/instagram.svg"
@@ -126,7 +126,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="" className="grid gap-4">
+                <Link href="https://www.linkedin.com/company/xifin-enterprise/" className="grid gap-4">
                   {" "}
                   <div className="flex items-center gap-x-[10px] sm:gap-x-[15px] justify-center">
                     <img
@@ -141,7 +141,7 @@ export function Footer() {
               </li>
               
               <li>
-                <Link href="" className="grid gap-4">
+                <Link href="https://www.facebook.com/profile.php?id=61560354717006&mibextid=ZbWKwL" className="grid gap-4">
                   {" "}
                   <div className=" flex items-center gap-x-[10px] sm:gap-x-[15px] justify-center">
                     <img
@@ -173,10 +173,11 @@ export function Footer() {
             <p className="font-semibold text-[22px]">About Us</p>
             <ul className="mt-[20px] flex flex-col gap-y-1 ">
               <li>
-                <Link href="/">Our Vision</Link>
+              <Link href="#mission" scroll={true} className=" scroll-smooth">Our Vision</Link>
+
               </li>
               <li>
-                <Link href="/about">Our Mission</Link>
+                <Link href="#mission">Our Mission</Link>
               </li>              
             </ul>
           </div>
@@ -185,13 +186,13 @@ export function Footer() {
             <p className="font-semibold text-[22px]">Faq</p>
             <ul className="mt-[20px] flex flex-col gap-y-[15px]">
               <li>
-                <Link href="/"> Timeframe </Link>
+                <Link href="/#faq"> Satisfaction </Link>
               </li>
               <li>
-                <Link href="/about"> Budget </Link>
+                <Link href="/#faq"> Services </Link>
               </li>
               <li>
-                <Link href="/invest">Scope</Link>
+                <Link href="/#faq">Pricing</Link>
               </li>
             </ul>
           </div>
@@ -200,13 +201,13 @@ export function Footer() {
             <p className="font-semibold text-[22px]">Career</p>
             <ul className="mt-[20px] flex flex-col gap-y-[15px]">
               <li>
-                <Link href="/">Our Values</Link>
+                <Link href="/career/#values">Our Values</Link>
               </li>
               <li>
-                <Link href="/about">Who We Are</Link>
+                <Link href="/career/#values">Who We Are</Link>
               </li>
               <li>
-                <Link href="/invest">Job Openings</Link>
+                <Link href="/career">Job Openings</Link>
               </li>
             </ul>
           </div>
@@ -214,26 +215,26 @@ export function Footer() {
             <p className="font-semibold text-[22px]">Service</p>
             <ul className="mt-[20px] flex flex-col gap-y-[15px]">
               <li>
-                <Link href="/privacy-policy">Graphic Design</Link>
+                <Link href="/services/graphicdesign">Graphic Design</Link>
               </li>
               <li>
-                <Link href="/terms-of-use">UI/UX Design</Link>
-              </li>
-
-              <li>
-                <Link href="/terms-of-use">Web Development</Link>
+                <Link href="/services/ui">UI/UX Design</Link>
               </li>
 
               <li>
-                <Link href="/terms-of-use">IT Services</Link>
+                <Link href="/services/webDev">Web Development</Link>
               </li>
 
               <li>
-                <Link href="/terms-of-use">Crypto Exchange</Link>
+                <Link href="/services/it">IT Services</Link>
               </li>
 
               <li>
-                <Link href="/terms-of-use">Virtual Assistance</Link>
+                <Link href="/services/crypto">Crypto Exchange</Link>
+              </li>
+
+              <li>
+                <Link href="/services/virtualassistant">Virtual Assistance</Link>
               </li>
             </ul>
           </div>

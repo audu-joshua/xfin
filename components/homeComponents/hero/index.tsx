@@ -46,10 +46,10 @@ export default function Hero() {
       </div>
 
       <div className=' hidden lg:mt-4 md:grid grid-flow-col text-center  w-full border border-solid border-white border-opacity-35 justify-stretch'>
-              <p className=' p-4 border border-solid border-white text-white text-opacity-35 hover:text-opacity-100 hover:bg-[#2F2E2E] cursor-pointer text-base border-opacity-35'> Website Design </p>
-              <p className=' p-4 text-white text-opacity-35 border border-solid border-white hover:text-opacity-100 text-base border-opacity-35 hover:bg-[#2F2E2E] cursor-pointer'> Graphic Design </p>
-              <p className=' p-4 text-white text-opacity-35 hover:text-opacity-100 border border-solid border-white text-base border-opacity-35 hover:bg-[#2F2E2E] cursor-pointer'> Website Development </p>
-              <p className=' p-4 text-white text-opacity-35 border border-solid border-white hover:text-opacity-100 text-base border-opacity-35 hover:bg-[#2F2E2E] cursor-pointer'> Crypto Exchange </p>
+              <Link href={"/services/webDev"} className=' p-4 border border-solid border-white text-white text-opacity-35 hover:text-opacity-100 hover:bg-[#2F2E2E] cursor-pointer text-base border-opacity-35'> Website Design </Link>
+              <Link href={"/services/graphicdesign"} className=' p-4 text-white text-opacity-35 border border-solid border-white hover:text-opacity-100 text-base border-opacity-35 hover:bg-[#2F2E2E] cursor-pointer'> Graphic Design </Link>
+              <Link href={"/services/webDev"} className=' p-4 text-white text-opacity-35 hover:text-opacity-100 border border-solid border-white text-base border-opacity-35 hover:bg-[#2F2E2E] cursor-pointer'> Website Development </Link>
+              <Link href={"/services/crypto"} className=' p-4 text-white text-opacity-35 border border-solid border-white hover:text-opacity-100 text-base border-opacity-35 hover:bg-[#2F2E2E] cursor-pointer'> Crypto Exchange </Link>
            </div>
     </div>
   )
