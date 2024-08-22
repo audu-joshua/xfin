@@ -144,7 +144,7 @@ const ContactForm = () => {
       <Image src={jude} alt="Your Image" className="w-full" />
       {/* Glassmorphic Overlay */}
       <div className='absolute px-2 pb-2 pr-4 w-[90%] md:w-[40%]'>
-      <div className=" w-[100%] md:w-[91%] rounded-xl md:bottom-6 md:h-[35%] h-[40%] p-2 md:p-4 bg-white bg-opacity-40">
+      <div className=" w-[100%] md:w-[91%] rounded-xl md:bottom-6 md:h-[35%] h-[40%] p-2 md:p-4 bg-white bg-opacity-60">
         <h4 className="text-lg md:text-xl font-semibold text-black text-center ">Jude Iria, CEO</h4>
         <div className="grid gap-4 py-2">
           <div className='flex justify-between gap-4 items-center'>

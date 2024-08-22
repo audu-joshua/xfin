@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const active = {
   fontWeight: 700,
@@ -15,163 +16,69 @@ export const Navigation = () => {
 
   return (
     <>
-      <header
-        className={`fixed w-full flex items-center justify-between px-[20px] top-0 md:px-[30px] gap-x-[60px] bg-black xl:px-[97px] z-50`}
-      >
-        <Link href={"/"}>
+      <header className="fixed w-full flex items-center justify-between px-2 md:px-12 lg:px-16 top-0 bg-black z-50">
+        <Link href="/">
           <img
-            src={"/images/logo.svg"}
+            src="/images/logo.svg"
             alt="logo"
-            height={"120px"}
-            width={"100px"}
-            className='h-[70px] md:h-fit '
+            className="h-16 md:h-20"
           />
         </Link>
 
-        <nav className="w-[70%]  text-white xl:w-[55%] hidden sm:block">
-          <ul className="flex text-base items-center gap-x-[30px] justify-between">
-            <li>
-              <Link href={"/"} style={pathname === "/" ? active : {}}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/about"}
-                style={pathname.includes("/about") ? active : {}}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                href={"/services"}
-                style={pathname.includes("/services") ? active : {}}
-              >
-                Services
-              </Link>
-            </li>
-
-{/* 
-            <li>
-              <Link
-                href={"/blog"}
-                style={pathname.includes("/blog") ? active : {}}
-              >
-                Blogs
-              </Link>
-            </li>
-*/}
-
-            <li>
-              <Link
-                href={"/career"}
-                style={pathname.includes("/career") ? active : {}}
-              >
-                Career
-              </Link>
-            </li>
-            <li className="bg-[#FF0909] p-4 px-8 rounded-full shadow-2xl shadow-[#FF0909]">
-              <Link
-                href={"/contact"}
-                style={pathname.includes("/events") ? active : {}}
-              >
-                Contact us
-              </Link>
+        <nav className="hidden sm:flex text-white w-full justify-end">
+          <ul className="flex items-center space-x-8">
+            <li><Link href="/" style={pathname === "/" ? active : {}}>Home</Link></li>
+            <li><Link href="/about" style={pathname.includes("/about") ? active : {}}>About</Link></li>
+            <li><Link href="/services" style={pathname.includes("/services") ? active : {}}>Services</Link></li>
+            <li><Link href="/career" style={pathname.includes("/career") ? active : {}}>Career</Link></li>
+            <li className="bg-red-600 p-2 px-4 rounded-full shadow-lg">
+              <Link href="/contact" style={pathname.includes("/contact") ? active : {}}>Contact us</Link>
             </li>
           </ul>
         </nav>
 
-        <div
-          className="sm:hidden relative w-[45px] h-[35px] p-[4px] overflow-hidden"
-          onClick={() => {
-            setHamburger((prevVal: boolean) => !prevVal);
-          }}
+        <button
+          className="sm:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1"
+          onClick={() => setHamburger(!hamburger)}
         >
           <div
-            className={`w-full h-[3px] rounded-[15px] bg-white absolute z-50 ${
-              hamburger ? "top-[50%] h-[10px]" : "top-[15%]"
-            } left-0`}
-            style={
-              hamburger
-                ? { transform: "rotate(45deg)", transition: "all 0.3s linear" }
-                : { transition: "all 0.3s linear" }
-            }
-          ></div>
+            className={`w-6 h-0.5 bg-white transition-transform duration-300 ${hamburger ? 'transform rotate-45 translate-y-1.5' : ''}`}
+          />
           <div
-            className="w-full h-[3px] rounded-[15px] bg-white absolute top-[50%] left-0"
-            style={
-              hamburger
-                ? { left: "100%", transition: "all 0.3s linear" }
-                : { transition: "all 0.3s linear" }
-            }
-          ></div>
+            className={`w-6 h-0.5 bg-white transition-opacity duration-300 ${hamburger ? 'opacity-0' : ''}`}
+          />
           <div
-            className={`w-full h-[3px] rounded-[15px] bg-white absolute ${
-              hamburger ? "top-[50%]" : "top-[85%]"
-            } left-0`}
-            style={
-              hamburger
-                ? { transform: "rotate(-45deg)", transition: "all 0.3s linear" }
-                : { transition: "all 0.3s linear" }
-            }
-          ></div>
-        </div>
+            className={`w-6 h-0.5 bg-white transition-transform duration-300 ${hamburger ? 'transform -rotate-45 -translate-y-1.5' : ''}`}
+          />
+        </button>
       </header>
 
-      <ul
-        className={`flex flex-col fixed w-full z-50 ${
-          hamburger ? "top-[70px] h-[100vh]" : "top-[-400%] h-fit"
-        } text-center text-white bg-black left-0`}
-        style={{ transition: "all 0.5s ease-in" }}
-      >
-        <li className="py-[10px] bg-black" onClick={() => {
-            setHamburger((prevVal: boolean) => !prevVal);
-          }}>
-          <Link href={"/"}>Home</Link>
-        </li>
-        <li className="py-[10px] bg-black" onClick={() => {
-            setHamburger((prevVal: boolean) => !prevVal);
-          }}>
-          <Link href={"/about"}>About</Link>
-        </li>
-        <li className="py-[10px] bg-black" onClick={() => {
-            setHamburger((prevVal: boolean) => !prevVal);
-          }}>
-          <Link href={"/services"} className="py-[10px]">
-            Services
-          </Link>
-        </li>
-        {/* 
-        <li className="py-[10px] bg-black" onClick={() => {
-            setHamburger((prevVal: boolean) => !prevVal);
-          }}>
-          <Link href={"/blog"} className="py-[10px]">
-            Blogs
-          </Link>
-        </li>
-        */}
-        <li className="py-[10px] bg-black" onClick={() => {
-            setHamburger((prevVal: boolean) => !prevVal);
-          }}>
-          <Link href={"/career"} className="py-[10px]">
-            Career
-          </Link>
-        </li>
-        <li className="bg-[#FF0909] mx-10 p-4 px-6 rounded-full shadow-2xl shadow-[#FF0909]">
-          <Link
-            href={"/contact"} 
-            style={pathname.includes("/events") ? active : {}}
-            onClick={() => {
-              setHamburger((prevVal: boolean) => !prevVal);
-            }}
+      <AnimatePresence>
+        {hamburger && (
+          <motion.ul
+            className="fixed top-16 z-30 left-0 w-full h-screen bg-black text-white text-center"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 1 }}
           >
-            Contact us
-          </Link>
-        </li>
-      </ul>
-
-      
+            {['/', '/about', '/services', '/career', '/contact'].map((href, index) => (
+              <motion.li
+                key={href}
+                className={`py-4 ${href === '/contact' ? 'bg-red-600 mx-8 rounded-full shadow-lg' : ''}`}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }} // Delay for staggered effect
+              >
+                <Link href={href} onClick={() => setHamburger(false)}>
+                  {href === '/' ? 'Home' : href.replace('/', '')}
+                </Link>
+              </motion.li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </>
   );
 };

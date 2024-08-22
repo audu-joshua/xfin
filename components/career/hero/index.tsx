@@ -15,7 +15,7 @@ export default function CareerHero() {
 
            </div>
         </div>
-        <div className='grid md:w-[40%] gap-2 justify-center grid-cols-3 items-center'>
+        <div id='whoweare' className='grid md:w-[40%] gap-2 justify-center grid-cols-3 items-center'>
             <img className='w-20 md:w-40 lg:w-28' src={'/images/CImg1.svg'}></img>
             <img className='w-25 md:w-40 lg:w-40' src={'/images/CImg2.svg'}></img>
             <img className='w-20 md:w-40 lg:w-28' src={'/images/CImg3.svg'}></img>
