@@ -4,20 +4,42 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 // Define slide-in variants
-const slideInVariants = {
-  hidden: (direction: string) => ({
-    x: direction === 'up' ? '-100vw' : '100vw',
+const slideInLeftVariants = {
+  hidden: {
+    x: '-100%',
     opacity: 0,
-  }),
+  },
   visible: {
     x: 0,
     opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 20,
+    },
   },
 };
 
+const slideInRightVariants = {
+  hidden: {
+    x: '100%',
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 20,
+    },
+  },
+};
+
+
 const slideUpVariants = {
   hidden: {
-    y: '50vh',
+    y: '30vh',
     opacity: 0,
   },
   visible: {
@@ -28,16 +50,16 @@ const slideUpVariants = {
 
 export default function Branding() {
   return (
-    <div className='bg-white lg:px-28 px-6 py-6'>
+    <div className='bg-white lg:px-28 px-6 py-6 overflow-hidden'>
       <h1 className='text-black text-center md:text-start text-3xl md:text-4xl lg:text-5xl font-bold'>
         Our Branding Solutions
       </h1>
       
-      <div className='grid lg:py-12 md:grid-cols-2 md:gap-4 md:justify-end md:items-end lg:gap-6'>
+      <div className='grid lg:py-12 md:grid-cols-2 md:gap-2 md:justify-end md:items-end lg:gap-4'>
         
         <motion.div
           className='p-4'
-          variants={slideUpVariants}
+          variants={slideInLeftVariants}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 1 }}
@@ -57,7 +79,7 @@ export default function Branding() {
 
         <motion.div
           className='p-4'
-          variants={slideUpVariants}
+          variants={slideInRightVariants}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -77,7 +99,7 @@ export default function Branding() {
 
         <motion.div
           className='p-4'
-          variants={slideUpVariants}
+          variants={slideInLeftVariants}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -97,7 +119,7 @@ export default function Branding() {
 
         <motion.div
           className='p-4'
-          variants={slideUpVariants}
+          variants={slideInRightVariants}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -117,7 +139,7 @@ export default function Branding() {
 
         <motion.div
           className='p-4'
-          variants={slideUpVariants}
+          variants={slideInLeftVariants}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
@@ -137,7 +159,7 @@ export default function Branding() {
 
         <motion.div
           className='p-4'
-          variants={slideUpVariants}
+          variants={slideInRightVariants}
           initial='hidden'
           whileInView='visible'
           transition={{ duration: 0.5 }}
