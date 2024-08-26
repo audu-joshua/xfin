@@ -51,7 +51,7 @@ export function Benefits() {
           transition={{ duration: 1 }}
         >
                 <div className='bg-white py-3 md:py-8 md:rounded-2xl p-8 shadow-lg shadow-black'>
-                    <h2 className=' text-2xl pb-2 md:text-2xl text-[#252424] font-bold'> Expert Solutions </h2>
+                    <h2 className=' text-lg pb-2 md:text-2xl text-[#252424] font-bold'> Expert Solutions </h2>
                     <p className='text-[#000000] text-sm'> Leverage our expertise in cutting-edge technologies to drive innovation and growth. Our team delivers tailored solutions that meet your unique business needs.
                     </p>
                 </div>
@@ -65,7 +65,7 @@ export function Benefits() {
           transition={{ duration: 1 }}
         >
                 <div className='bg-white py-3 md:py-8 md:rounded-2xl p-8 shadow-lg shadow-black'>
-                    <h2 className=' text-2xl pb-2 md:text-2xl text-[#252424] font-bold'> Ehnanced Effiency </h2>
+                    <h2 className=' text-lg pb-2 md:text-2xl text-[#252424] font-bold'> Ehnanced Effiency </h2>
                     <p className='text-[#000000] text-sm'> Streamline your operations with our optimized processes and automation capabilities, reducing costs and increasing productivity.
                     </p>
                 </div>
@@ -80,7 +80,7 @@ export function Benefits() {
           transition={{ duration: 1 }}
         >
                 <div className='bg-white py-3 md:py-8 md:rounded-2xl p-8 shadow-lg shadow-black'>
-                    <h2 className=' text-2xl pb-2 md:text-2xl text-[#252424] font-bold'> Scalable Growth </h2>
+                    <h2 className=' text-lg pb-2 md:text-2xl text-[#252424] font-bold'> Scalable Growth </h2>
                     <p className='text-[#000000] text-sm'> Partner with us to build scalable solutions that adapt to your evolving business needs, ensuring seamless growth and flexibility. 
                     </p>
                 </div>
@@ -96,7 +96,7 @@ export function Benefits() {
         >
 
                 <div className='bg-white py-3 md:py-8 md:rounded-2xl p-8 shadow-lg shadow-black'>
-                    <h2 className=' text-2xl pb-2 md:text-2xl text-[#252424] font-bold'> Proactive Support </h2>
+                    <h2 className=' text-lg pb-2 md:text-2xl text-[#252424] font-bold'> Proactive Support </h2>
                     <p className='text-[#000000] text-sm'> Enjoy dedicated support from our expert team, ensuring prompt issue resolution and proactive maintenance to minimize downtime.
                     </p>
                 </div>
@@ -112,7 +112,7 @@ export function Benefits() {
         >
 
                 <div className='bg-white py-3 md:py-8 md:rounded-2xl p-8 shadow-lg shadow-black'>
-                    <h2 className=' text-2xl pb-2 md:text-2xl text-[#252424] font-bold'> Innovative Approach </h2>
+                    <h2 className=' text-lg pb-2 md:text-2xl text-[#252424] font-bold'> Innovative Approach </h2>
                     <p className='text-[#000000] text-sm'> Stay ahead of the curve with our innovative approach, leveraging the latest technologies to drive business success and competitiveness.
                     </p>
                 </div>
@@ -127,7 +127,7 @@ export function Benefits() {
         >
 
                 <div className='bg-white py-3 md:py-8 md:rounded-2xl p-8 shadow-lg shadow-black'>
-                    <h2 className=' text-2xl pb-2 md:text-2xl text-[#252424] font-bold'> Trust and Reliability </h2>
+                    <h2 className=' text-lg pb-2 md:text-2xl text-[#252424] font-bold'> Trust and Reliability </h2>
                     <p className='text-[#000000] text-sm'> Build on our reputation for reliability and trust, ensuring your business is in good hands with our experienced and dedicated team. 
                     </p>
                 </div>
