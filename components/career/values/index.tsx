@@ -59,7 +59,7 @@ export default function CareerValues() {
           <h3 className=' text-3xl font-bold text-black text-center pt-10'> Numbers </h3>
           <div className='grid py-8'>
             <p className='text-black py-6 text-center text-3xl md:text-4xl justify-center lg:text-6xl font-bold  flex'>
-              200+ <em className=' text-black text-[16px] md:text-[24px]  w-[30%] leading-none md:w-fit md:self-center  font-medium not-italic'> Experts in the field </em>
+              10+ <em className=' text-black text-[16px] md:text-[24px]  w-[30%] leading-none md:w-fit md:self-center  font-medium not-italic'> Experts in the field </em>
             </p>
 
             <p className='text-black py-4 text-center text-3xl md:text-4xl justify-center lg:text-6xl font-bold  flex'>
