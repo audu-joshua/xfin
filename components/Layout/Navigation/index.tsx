@@ -31,7 +31,7 @@ export const Navigation = () => {
             <li><Link href="/about" style={pathname.includes("/about") ? active : {}}>About</Link></li>
             <li><Link href="/services" style={pathname.includes("/services") ? active : {}}>Services</Link></li>
             <li><Link href="/career" style={pathname.includes("/career") ? active : {}}>Career</Link></li>
-            <li className="bg-red-600 p-2 px-4 rounded-full shadow-lg">
+            <li className="bg-[#FF0909] p-2 px-4 rounded-full shadow-lg">
               <Link href="/contact" style={pathname.includes("/contact") ? active : {}}>Contact us</Link>
             </li>
           </ul>
@@ -56,7 +56,7 @@ export const Navigation = () => {
       <AnimatePresence>
         {hamburger && (
           <motion.ul
-            className="fixed top-16 z-30 left-0 w-full h-screen bg-black text-white text-center"
+            className="fixed top-16 capitalize z-30 left-0 w-full h-screen bg-black text-white text-center"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
