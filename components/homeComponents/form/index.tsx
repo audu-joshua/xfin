@@ -168,44 +168,46 @@ const ContactForm = () => {
         </button>
       </form>
 
-      <div className="md:w-[45%] grid items-center">
-        {/* Image Container */}
-        <div className="rounded-2xl grid items-end">
-          {/* Insert your image here */}
-          <Image src={jude} alt="Your Image" className="w-full" />
-          {/* Glassmorphic Overlay */}
-          <div className="absolute px-2 pb-2 pr-4 w-[90%] md:w-[40%]">
-            <div className="w-[100%] md:w-[91%] rounded-xl md:bottom-6 md:h-[35%] h-[40%] p-2 md:p-4 bg-white bg-opacity-60">
-              <h4 className="text-lg md:text-xl font-semibold text-black text-center">Jude Iria, CEO</h4>
-              <div className="grid gap-4 py-2">
-                <div className="flex justify-between gap-4 items-center">
-                  <div className="flex items-center text-black cursor-pointer hover:animate-bounce">
-                    <FiMail />
-                    <p className="px-1 text-sm md:text-base">judeiria3390@gmail.com</p>
-                  </div>
+      <div className="relative md:w-[45%] grid items-center">
+  {/* Image Container */}
+  <div className="relative rounded-2xl grid items-end">
+    {/* Insert your image here */}
+    <Image src={jude} alt="Your Image" className="w-full" />
+    {/* Glassmorphic Overlay */}
+    <div className="absolute bottom-0 left-0 right-0 mx-auto px-2 pb-2 pr-4 w-[100%] md:w-[98%]">
+      <div className="w-full rounded-xl p-2 md:p-4 bg-white bg-opacity-60">
+        <h4 className="text-base md:text-xl font-semibold text-black text-center">Jude Iria, CEO</h4>
+        <div className="grid gap-4 py-2">
+          <div className="flex justify-between gap-4 items-center">
+            <div className="flex items-center text-black cursor-pointer md:hover:animate-bounce">
+              <FiMail />
+              <p className="px-1 text-xs md:text-base">judeiria3390@gmail.com</p>
+            </div>
 
-                  <div className="flex items-center text-black cursor-pointer hover:animate-bounce">
-                    <BsLinkedin />
-                    <p className="px-1 text-sm md:text-base">Jude Iria</p>
-                  </div>
-                </div>
+            <div className="flex items-center text-black cursor-pointer md:hover:animate-bounce">
+              <BsLinkedin />
+              <p className="px-1 text-xs md:text-base">Jude Iria</p>
+            </div>
+          </div>
 
-                <div className="flex justify-between gap-4 items-center">
-                  <div className="flex items-center text-black cursor-pointer hover:animate-bounce">
-                    <BsPhone />
-                    <p className="px-1 text-sm md:text-base">(+44) 7378201108</p>
-                  </div>
+          <div className="flex justify-between gap-4 items-center">
+            <div className="flex items-center text-black cursor-pointer md:hover:animate-bounce">
+              <BsPhone />
+              <p className="px-1 text-xs md:text-base">(+44) 7378201108</p>
+            </div>
 
-                  <div className="flex items-center text-black cursor-pointer hover:animate-bounce">
-                    <BsInstagram />
-                    <p className="px-1 text-sm md:text-base">@iria-jude</p>
-                  </div>
-                </div>
-              </div>
+            <div className="flex items-center text-black cursor-pointer md:hover:animate-bounce">
+              <BsInstagram />
+              <p className="px-1 text-xs md:text-base">@iria-jude</p>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
     </div>
   );
 };

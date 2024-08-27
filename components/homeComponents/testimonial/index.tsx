@@ -60,7 +60,7 @@ export default function Testimonial() {
         </div>
         <iframe
           width="100%"
-          height="500"
+          height="360"
           src="https://drive.google.com/file/d/1woc9wBWFFiOz5amYELho_VgwJ9vZyRa8/preview"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
