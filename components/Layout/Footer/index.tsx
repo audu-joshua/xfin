@@ -1,10 +1,35 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { BsArrowUpRight } from "react-icons/bs";
-import { FiInstagram } from "react-icons/fi";
-import { BsFacebook, BsTwitter, BsLinkedin, BsYoutube } from "react-icons/bs";
+import React, {useState} from "react";
+import { sendSubscriptionEmail } from '../../../utils/subscribe'; // Adjust the path as needed
+
 export function Footer() {
+  const [email, setEmail] = useState(""); // State to store the email
+  const [error, setError] = useState(""); // State for error messages
+  const [success, setSuccess] = useState(""); // State for success messages
+
+  const handleSubscribe = async () => {
+    if (!email) {
+      setError('Please enter an email address.');
+      return;
+    }
+    
+    try {
+      // Call the EmailJS function with the email address
+      const response = await sendSubscriptionEmail(email);
+      console.log('EmailJS response:', response); // Log response for debugging
+      setSuccess('Successfully subscribed!');
+      setEmail(""); // Clear the input field
+      setError(""); // Clear any previous errors
+    } catch (err) {
+      console.error('Error:', err); // Log error details for debugging
+      setError('There was an error subscribing to the newsletter. Please try again.');
+      setSuccess(""); // Clear any previous success messages
+    }
+  };
+
+
   return (
     <footer className="p-[20px] bg-black w-full md:py-[30px] md:px-[108px] z-20" style={{ zIndex: 20 }}>
       <div className="md:grid grid-cols-2 md:grid-cols-1 justify-between gap-x-[50px] lg:gap-x-[150px] 2xl:gap-x-[325px] ">
@@ -15,8 +40,10 @@ export function Footer() {
               <h3 className=" font-bold text-xl"> Get to our Newsletter </h3>
               <p className=" font-normal text-xs py-2"> Be the first to receive update when they roll out. </p>
               <div className="py-2 gap-4 my-4 px-2 rounded-xl w-full flex bg-white justify-between">
-              <input placeholder="Email Address" className=" w-[60%] focus:outline-none placeholder:text-black pl-2 text-black"/>
-              <p className="py-2 rounded-2xl w-[40%] text-white px-4 bg-[#FF0909] "> Subscribe </p>
+              <input placeholder="Email Address" value={email}
+          onChange={(e) => setEmail(e.target.value)} // Update state on input change
+          className=" w-[60%] focus:outline-none placeholder:text-black pl-2 text-black"/>
+              <p onClick={handleSubscribe} className="py-2 rounded-2xl w-[40%] text-white px-4 bg-[#FF0909] "> Subscribe </p>
             </div>
             </div>
 
@@ -108,8 +135,10 @@ export function Footer() {
 
             <div className="grid items-center pt-4">
             <div className="py-2 my-4 px-2 gap-4 rounded-xl w-full flex bg-white justify-between">
-              <input placeholder="Email Address" className=" focus:outline-none placeholder:text-black pl-2 w-[70%] text-black"/>
-              <p className="py-2 rounded-2xl cursor-pointer hover:bg-black text-white px-6 bg-[#FF0909] w-[30%]"> Subscribe </p>
+              <input placeholder="Email Address" value={email}
+                    onChange={(e) => setEmail(e.target.value)} // Update state on input change
+                    className=" focus:outline-none placeholder:text-black pl-2 w-[70%] text-black"/>
+              <p className="py-2 rounded-2xl cursor-pointer hover:bg-black text-white px-6 bg-[#FF0909] w-[30%]" onClick={handleSubscribe}> Subscribe </p>
             </div>
             <ul className="mt-[20px] flex justify-between">
               <li>

@@ -1,25 +1,8 @@
-import Mailchimp from '@mailchimp/mailchimp_marketing';
+// lib/emailService.js
+import emailjs from 'emailjs-com';
 
-Mailchimp.setConfig({
-  apiKey: process.env.MAILCHIMP_API_KEY,
-  server: process.env.MAILCHIMP_SERVER_PREFIX,
-});
-
-export default async (req, res) => {
-  const { email } = req.body;
-
-  if (!email) {
-    return res.status(400).json({ error: "Email is required" });
-  }
-
-  try {
-    const response = await Mailchimp.lists.addListMember(process.env.MAILCHIMP_AUDIENCE_ID, {
-      email_address: email,
-      status: "subscribed",
-    });
-
-    return res.status(200).json({ message: "Subscribed successfully" });
-  } catch (error) {
-    return res.status(500).json({ error: "Subscription failed" });
-  }
+export const sendSubscriptionEmail = (email) => {
+  return emailjs.send('service_t8kcmm4', 'template_ow9g2p4', {
+    to_email: email,
+  }, 'i-_4dtMn3rZR9OFB6');
 };
