@@ -36,7 +36,7 @@ export function ItHero() {
       <div className='h-[50vh] md:h-screen px-3 md:px-6 lg:px-12 grid items-center bg-black bg bg-opacity-60 gradient'>
       <div className='text-white'>
            <h1 className=' text-4xl md:text-6xl lg:text-7xl font-bold py-4'> IT Services </h1>    
-           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal'>Get all the technical support that you desire for your brand. W are here to assist you, every step of the way. </p>    
+           <p className=' text-sm md:text-lg lg:text-2xl md:w-[60%] lg:w-[70%] font-normal'>Get all the technical support that you desire for your brand. We are here to assist you, every step of the way. </p>    
 
            <div className='my-8'>
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">

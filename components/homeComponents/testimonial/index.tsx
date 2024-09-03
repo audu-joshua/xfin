@@ -41,10 +41,10 @@ export default function Testimonial() {
         />
         <div className='py-5'>
           <h2 className='text-black text-[32px] md:text-[34px] lg:text-5xl font-bold leading-none'>
-          Transform Your Business 
+            Transform Your Business
           </h2>
           <p className='text-black py-3 font-medium text-sm md:text-base lg:text-lg'>
-          Discover how our expert services can elevate your digital presence
+            Discover how our expert services can elevate your digital presence
           </p>
         </div>
       </div>

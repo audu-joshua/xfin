@@ -5,7 +5,7 @@ export default function CareerHero() {
     <div className='bg-[#252424] mt-[-30px] py-20 md:py-28 lg:py-12 lg:pb-20 px-[20px] md:px-[30px] xl:px-[97px]'>
       <div className='flex md:justify-between flex-col-reverse md:flex-row'>
         <div className=' pt-10 md:pt-0 md:py-10 grid items-center md:w-[60%]'>
-            <h1 className=' md:w-[85%] w-[100%] leading-[1.13] font-bold text-5xl md:6xl lg:text-8xl text-white'>Your talent matters for the world!</h1>
+            <h1 className=' md:w-[85%] w-[100%] leading-[1.13] font-bold text-5xl md:6xl lg:text-8xl text-white'>Your talent matters to the world!</h1>
             <p className=' text-white py-4 text-base md:text-lg lg:text-2xl'>And we are here to appreciate it decently.</p>
             
             <div className='my-8'>

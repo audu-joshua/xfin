@@ -150,7 +150,7 @@ export default function Branding() {
           <p className='text-black'>
             We provide expert virtual assistant services, streamlining your tasks and enhancing productivity. From email management to data entry, scheduling, and social media management, our virtual assistants work seamlessly to support your business needs, freeing up your time to focus on growth and success.
           </p>
-          <Link href="/services/virtualassistant" className='cursor-pointer'>
+          <Link href="/services/va" className='cursor-pointer'>
             <p className='bg-black text-center p-4 px-8 rounded-full shadow-2xl my-4 shadow-black md:w-1/2 text-white'>
               Learn More
             </p>
