@@ -1,35 +1,55 @@
-"use client"
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React, {useState} from "react";
-import { sendSubscriptionEmail } from '../../../utils/subscribe'; // Adjust the path as needed
 
 export function Footer() {
   const [email, setEmail] = useState(""); // State to store the email
   const [error, setError] = useState(""); // State for error messages
   const [success, setSuccess] = useState(""); // State for success messages
+  const [loading, setLoading] = useState(false); // State for loading spinner
 
   const handleSubscribe = async () => {
     if (!email) {
-      setError('Please enter an email address.');
+      setError("Please enter an email address.");
       return;
     }
-    
+
+    setLoading(true); // Show spinner when request starts
+
     try {
-      // Call the EmailJS function with the email address
-      const response = await sendSubscriptionEmail(email);
-      console.log('EmailJS response:', response); // Log response for debugging
-      setSuccess('Successfully subscribed!');
-      setEmail(""); // Clear the input field
-      setError(""); // Clear any previous errors
+      // Make the POST request to the API route
+      const response = await fetch("/api", { // Adjust route if necessary
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }), // Send email in the body
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setSuccess(result.message || "Successfully subscribed!");
+        setEmail(""); // Clear the input field
+        setError(""); // Clear any previous errors
+      } else {
+        setError(result.error || "An error occurred");
+      }
     } catch (err) {
-      console.error('Error:', err); // Log error details for debugging
-      setError('There was an error subscribing to the newsletter. Please try again.');
+      console.error("Error:", err);
+      setError("There was an error subscribing to the newsletter. Please try again.");
       setSuccess(""); // Clear any previous success messages
+    } finally {
+      setLoading(false); // Hide spinner after request completes
     }
   };
 
 
+  
+  
+
+  
   return (
     <footer className="p-[20px] bg-black w-full md:py-[30px] md:px-[108px] z-20" style={{ zIndex: 20 }}>
       <div className="md:grid grid-cols-2 md:grid-cols-1 justify-between gap-x-[50px] lg:gap-x-[150px] 2xl:gap-x-[325px] ">
@@ -40,12 +60,21 @@ export function Footer() {
               <h3 className=" font-bold text-xl"> Get to our Newsletter </h3>
               <p className=" font-normal text-xs py-2"> Be the first to receive update when they roll out. </p>
               <div className="py-2 gap-4 my-4 px-2 rounded-xl w-full flex bg-white justify-between">
-              <input placeholder="Email Address" value={email}
-          onChange={(e) => setEmail(e.target.value)} // Update state on input change
-          className=" w-[60%] focus:outline-none placeholder:text-black pl-2 text-black"/>
-              <p onClick={handleSubscribe} className="py-2 rounded-2xl w-[40%] text-white px-4 bg-[#FF0909] "> Subscribe </p>
-            </div>
-            </div>
+                  <input 
+                    placeholder="Email Address" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)} 
+                    className=" w-[60%] focus:outline-none placeholder:text-black pl-2 text-black"
+                  />
+                  <div className="flex items-center">
+                    <p onClick={handleSubscribe} className="py-2 rounded-2xl w-full text-white px-4 bg-[#FF0909] cursor-pointer">Subscribe</p>
+                    {loading && <div className="w-4 h-4 border-2 border-gray-200 border-t-2 border-t-red-500 rounded-full animate-spin ml-2"></div>}
+                  </div>
+                </div>
+                {success && <p className="text-green-500">{success}</p>}
+                {error && <p className="text-red-500">{error}</p>}
+              </div>
+
 
             
             <div className="">
@@ -135,11 +164,17 @@ export function Footer() {
 
             <div className="grid items-center pt-4">
             <div className="py-2 my-4 px-2 gap-4 rounded-xl w-full flex bg-white justify-between">
-              <input placeholder="Email Address" value={email}
-                    onChange={(e) => setEmail(e.target.value)} // Update state on input change
-                    className=" focus:outline-none placeholder:text-black pl-2 w-[70%] text-black"/>
-              <p className="py-2 rounded-2xl cursor-pointer hover:bg-black text-white px-6 bg-[#FF0909] w-[30%]" onClick={handleSubscribe}> Subscribe </p>
-            </div>
+                  <input 
+                    placeholder="Email Address" 
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)} 
+                    className=" focus:outline-none placeholder:text-black pl-2 w-[70%] text-black"
+                  />
+                  <p className="py-2 rounded-2xl cursor-pointer hover:bg-black text-white px-6 bg-[#FF0909] w-[30%]" onClick={handleSubscribe}> Subscribe </p>{loading && <div className="w-4 h-4 border-2 border-gray-200 border-t-2 border-t-red-500 rounded-full animate-spin ml-2"></div>}
+                </div>
+                {success && <p className="text-green-500">{success}</p>}
+                {error && <p className="text-red-500">{error}</p>}
+
             <ul className="mt-[20px] flex justify-between">
               <li>
                 <Link href="https://www.instagram.com/xifin_enterprise/" className="grid gap-4">
