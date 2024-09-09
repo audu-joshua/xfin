@@ -19,7 +19,7 @@ export function Footer() {
 
     try {
       // Make the POST request to the API route
-      const response = await fetch("/api", { // Adjust route if necessary
+      const response = await fetch("/api/subscribe", { // Adjust route if necessary
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -61,14 +61,13 @@ export function Footer() {
               <p className=" font-normal text-xs py-2"> Be the first to receive update when they roll out. </p>
               <div className="py-2 gap-4 my-4 px-2 rounded-xl w-full flex bg-white justify-between">
                   <input 
-                    placeholder="Stay Tuned! 🚀 " 
-                    disabled 
+                    placeholder="Stay Tuned! 🚀 "  
                     value={email}
                     onChange={(e) => setEmail(e.target.value)} 
                     className=" w-[60%] focus:outline-none placeholder:text-black pl-2 text-black"
                   />
                   <div className="flex items-center">
-                    <button onClick={handleSubscribe} disabled  className="py-2 rounded-2xl w-full text-white px-4 bg-[#FF0909] cursor-pointer">Subscribe</button>
+                    <button onClick={handleSubscribe}  className="py-2 rounded-2xl w-full text-white px-4 bg-[#FF0909] cursor-pointer">Subscribe</button>
                     {loading && <div className="w-4 h-4 border-2 border-gray-200 border-t-2 border-t-red-500 rounded-full animate-spin ml-2"></div>}
                   </div>
                 </div>
