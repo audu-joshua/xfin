@@ -52,7 +52,7 @@ export default function Testimonial() {
       <div className='md:py-8 lg:py-12'>
         <div className='py-4'>
           <h2 className='text-black text-[32px] md:text-[34px] lg:text-5xl font-bold'>
-            Video Testimonials
+            Trusted and Reliable
           </h2>
           <p className='text-black font-medium text-sm md:text-base lg:text-lg'>
             Listen to what our clients have to say about us

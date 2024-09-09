@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -12,7 +12,16 @@ const active = {
 
 export const Navigation = () => {
   const [hamburger, setHamburger] = useState(false);
+  const [loadingPage, setLoadingPage] = useState<string | null>(null);
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleNavigation = async (href: string) => {
+    setLoadingPage(href);  // Set the loading page to the clicked href
+    await router.push(href);
+    setHamburger(false); // Close the hamburger menu after navigation
+    setLoadingPage(null);  // Reset the loading state after navigation
+  };
 
   return (
     <>
@@ -26,14 +35,20 @@ export const Navigation = () => {
         </Link>
 
         <nav className="hidden sm:flex text-white w-full justify-end">
-          <ul className="flex items-center space-x-8">
-            <li><Link href="/" style={pathname === "/" ? active : {}}>Home</Link></li>
-            <li><Link href="/about" style={pathname.includes("/about") ? active : {}}>About</Link></li>
-            <li><Link href="/services" style={pathname.includes("/services") ? active : {}}>Services</Link></li>
-            <li><Link href="/career" style={pathname.includes("/career") ? active : {}}>Career</Link></li>
-            <li className="bg-[#FF0909] p-2 px-4 rounded-full shadow-lg">
-              <Link href="/contact" style={pathname.includes("/contact") ? active : {}}>Contact us</Link>
-            </li>
+          <ul className="flex items-center capitalize space-x-8">
+            {['/', '/about', '/services', '/career', '/contact'].map((href: string) => (
+              <li key={href}>
+                <Link href={href} style={pathname.includes(href) ? active : {}}>
+                  {pathname.includes(href) && loadingPage === href ? (
+                    <>
+                      <span>Loading...</span> {/* Add a small spinner here */}
+                    </>
+                  ) : (
+                    href === '/' ? 'Home' : href.replace('/', '')
+                  )}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -62,7 +77,7 @@ export const Navigation = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 1 }}
           >
-            {['/', '/about', '/services', '/career', '/contact'].map((href, index) => (
+            {['/', '/about', '/services', '/career', '/contact'].map((href: string, index: number) => (
               <motion.li
                 key={href}
                 className={`py-4 ${href === '/contact' ? 'bg-red-600 mx-8 rounded-full shadow-lg' : ''}`}
@@ -71,9 +86,15 @@ export const Navigation = () => {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }} // Delay for staggered effect
               >
-                <Link href={href} onClick={() => setHamburger(false)}>
+                <button
+                  className="w-full capitalize h-full flex justify-center items-center"
+                  onClick={() => handleNavigation(href)}
+                >
                   {href === '/' ? 'Home' : href.replace('/', '')}
-                </Link>
+                  {loadingPage === href && (
+                    <div className="ml-2 spinner-border animate-spin inline-block w-4 h-4 border-2 rounded-full border-red-600 border-t-transparent"></div> // Simple spinner
+                  )}
+                </button>
               </motion.li>
             ))}
           </motion.ul>

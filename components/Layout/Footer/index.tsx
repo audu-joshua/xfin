@@ -61,13 +61,14 @@ export function Footer() {
               <p className=" font-normal text-xs py-2"> Be the first to receive update when they roll out. </p>
               <div className="py-2 gap-4 my-4 px-2 rounded-xl w-full flex bg-white justify-between">
                   <input 
-                    placeholder="Email Address" 
+                    placeholder="Stay Tuned! 🚀 " 
+                    disabled 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)} 
                     className=" w-[60%] focus:outline-none placeholder:text-black pl-2 text-black"
                   />
                   <div className="flex items-center">
-                    <p onClick={handleSubscribe} className="py-2 rounded-2xl w-full text-white px-4 bg-[#FF0909] cursor-pointer">Subscribe</p>
+                    <button onClick={handleSubscribe} disabled  className="py-2 rounded-2xl w-full text-white px-4 bg-[#FF0909] cursor-pointer">Subscribe</button>
                     {loading && <div className="w-4 h-4 border-2 border-gray-200 border-t-2 border-t-red-500 rounded-full animate-spin ml-2"></div>}
                   </div>
                 </div>
@@ -165,12 +166,13 @@ export function Footer() {
             <div className="grid items-center pt-4">
             <div className="py-2 my-4 px-2 gap-4 rounded-xl w-full flex bg-white justify-between">
                   <input 
-                    placeholder="Email Address" 
+                    placeholder="Stay Tuned! 🚀 " 
+                    disabled
                     value={email}
                     onChange={(e) => setEmail(e.target.value)} 
                     className=" focus:outline-none placeholder:text-black pl-2 w-[70%] text-black"
                   />
-                  <p className="py-2 rounded-2xl cursor-pointer hover:bg-black text-white px-6 bg-[#FF0909] w-[30%]" onClick={handleSubscribe}> Subscribe </p>{loading && <div className="w-4 h-4 border-2 border-gray-200 border-t-2 border-t-red-500 rounded-full animate-spin ml-2"></div>}
+                  <button disabled className="py-2 rounded-2xl cursor-pointer hover:bg-black text-white px-6 bg-[#FF0909] w-[30%]" onClick={handleSubscribe}> Subscribe </button>{loading && <div className="w-4 h-4 border-2 border-gray-200 border-t-2 border-t-red-500 rounded-full animate-spin ml-2"></div>}
                 </div>
                 {success && <p className="text-green-500">{success}</p>}
                 {error && <p className="text-red-500">{error}</p>}

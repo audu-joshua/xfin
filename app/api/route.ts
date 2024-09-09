@@ -109,6 +109,6 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
     }
   } catch (error) {
     console.error("Error occurred:", error);
-    return res.status(500).json({ error: "Internal server error" });
+    return res.status(500).json({ error: "Internal jjnjn server error" });
   }
 }
