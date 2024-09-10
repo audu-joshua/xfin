@@ -55,7 +55,7 @@ export default function Testimonial() {
             Trusted and Reliable
           </h2>
           <p className='text-black font-medium text-sm md:text-base lg:text-lg'>
-            Listen to what our clients have to say about us
+          Built on Integrity, Driven by Innovation
           </p>
         </div>
         <iframe
