@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import md5 from 'md5';
+import mailchimp from '@mailchimp/mailchimp_marketing';
+import crypto from 'crypto';  // Import crypto module for hashing
 
-// Mailchimp setup
-const mailchimp = require("@mailchimp/mailchimp_marketing");
 mailchimp.setConfig({
   apiKey: process.env.MAILCHIMP_API_KEY!,
   server: process.env.MAILCHIMP_API_SERVER!,
@@ -10,104 +9,46 @@ mailchimp.setConfig({
 
 const MailchimpAudience = process.env.MAILCHIMP_AUDIENCE_ID!;
 
-async function createAudienceIfNotExists() {
-  const event = {
-    name: "Mail Subscription List"
-  };
-
-  const footerContactInfo = {
-    company: "Your Company",
-    address1: "123 Your Street",
-    city: "Your City",
-    state: "Your State",
-    zip: "12345",
-    country: "US"
-  };
-
-  const campaignDefaults = {
-    from_name: "Your Company",
-    from_email: "info@yourcompany.com",
-    subject: "Subscribe to our list",
-    language: "EN_US"
-  };
-
-  try {
-    // Attempt to get the list
-    await mailchimp.lists.getList(MailchimpAudience);
-    console.log("Audience already exists.");
-  } catch (error) {
-    if (error instanceof Error && error.message === "404") {
-      // If the list doesn't exist, create it
-      await mailchimp.lists.createList({
-        name: event.name,
-        contact: footerContactInfo,
-        permission_reminder: "You are receiving this email because you opted in.",
-        email_type_option: true,
-        campaign_defaults: campaignDefaults
-      });
-      console.log("Successfully created an audience.");
-    } else {
-      throw error;
-    }
-  }
-}
+// Function to generate MD5 hash of email (subscriber hash)
+const getSubscriberHash = (email: string): string => {
+  return crypto.createHash('md5').update(email.toLowerCase()).digest('hex');
+};
 
 export async function POST(req: NextRequest) {
   try {
     const { email } = await req.json();
+
     if (!email) {
       return NextResponse.json({ error: "Email is required" }, { status: 400 });
     }
 
-    // Generate MD5 hash of the email
-    const subscriberHash = md5(email.toLowerCase());
+    // Generate subscriber hash from email
+    const subscriberHash = getSubscriberHash(email);
 
-    // Check if the user is already subscribed
-    const checkUrl = `https://${process.env.MAILCHIMP_API_SERVER}.api.mailchimp.com/3.0/lists/${MailchimpAudience}/members/${subscriberHash}`;
+    try {
+      // Check if the user is already subscribed
+      const existingMember = await mailchimp.lists.getListMember(MailchimpAudience, subscriberHash);
 
-    const checkResponse = await fetch(checkUrl, {
-      method: "GET",
-      headers: {
-        Authorization: `Basic ${Buffer.from(`any:${process.env.MAILCHIMP_API_KEY}`).toString("base64")}`,
-        "Content-Type": "application/json",
-      },
+      if (existingMember.status === "subscribed") {
+        return NextResponse.json({ message: "You are already subscribed!" });
+      }
+    } catch (error: any) {
+      // If error status is 404, user is not subscribed, ignore the error
+      if (error.response?.status !== 404) {
+        console.error("Error checking subscription status:", error);
+        return NextResponse.json({ error: "Error checking subscription status" }, { status: 500 });
+      }
+    }
+
+    // Add email to Mailchimp list
+    const response = await mailchimp.lists.addListMember(MailchimpAudience, {
+      email_address: email,
+      status: "subscribed",
     });
 
-    if (checkResponse.ok) {
-      const checkResult = await checkResponse.json();
-
-      // If the user is already subscribed
-      if (checkResult.status === "subscribed") {
-        return NextResponse.json({ error: "This email is already subscribed." }, { status: 400 });
-      }
-    } else if (checkResponse.status === 404) {
-      // If the user is not subscribed, proceed to subscribe them
-      const customUrl = `https://${process.env.MAILCHIMP_API_SERVER}.api.mailchimp.com/3.0/lists/${MailchimpAudience}/members`;
-
-      const subscribeResponse = await fetch(customUrl, {
-        method: "POST",
-        headers: {
-          Authorization: `Basic ${Buffer.from(`any:${process.env.MAILCHIMP_API_KEY}`).toString("base64")}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email_address: email,
-          status: "subscribed",
-        }),
-      });
-
-      const result = await subscribeResponse.json();
-
-      if (subscribeResponse.ok) {
-        return NextResponse.json({ message: "Successfully subscribed!" });
-      } else {
-        return NextResponse.json({ error: result.detail || "An error occurred" }, { status: subscribeResponse.status });
-      }
-    } else {
-      return NextResponse.json({ error: "Error checking subscription status" }, { status: checkResponse.status });
-    }
-  } catch (error) {
+    return NextResponse.json({ message: "Successfully subscribed!" });
+  } catch (error: any) {
     console.error("Error occurred:", error);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+    return NextResponse.json({ error: error.message || "Internal server error" }, { status: 500 });
   }
 }

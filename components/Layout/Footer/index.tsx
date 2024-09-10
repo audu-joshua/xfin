@@ -19,12 +19,12 @@ export function Footer() {
 
     try {
       // Make the POST request to the API route
-      const response = await fetch("/api/subscribe", { // Adjust route if necessary
+      const response = await fetch("/api/subscribe", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email }), // Send email in the body
+        body: JSON.stringify({ email }),
       });
 
       const result = await response.json();
@@ -46,8 +46,6 @@ export function Footer() {
   };
 
 
-  
-  
 
   
   return (
@@ -61,7 +59,7 @@ export function Footer() {
               <p className=" font-normal text-xs py-2"> Be the first to receive update when they roll out. </p>
               <div className="py-2 gap-4 my-4 px-2 rounded-xl w-full flex bg-white justify-between">
                   <input 
-                    placeholder="Stay Tuned! 🚀 "  
+                    placeholder="Email 🚀 "  
                     value={email}
                     onChange={(e) => setEmail(e.target.value)} 
                     className=" w-[60%] focus:outline-none placeholder:text-black pl-2 text-black"
@@ -165,13 +163,12 @@ export function Footer() {
             <div className="grid items-center pt-4">
             <div className="py-2 my-4 px-2 gap-4 rounded-xl w-full flex bg-white justify-between">
                   <input 
-                    placeholder="Stay Tuned! 🚀 " 
-                    disabled
+                    placeholder="Your Email Here 🚀 " 
                     value={email}
                     onChange={(e) => setEmail(e.target.value)} 
                     className=" focus:outline-none placeholder:text-black pl-2 w-[70%] text-black"
                   />
-                  <button disabled className="py-2 rounded-2xl cursor-pointer hover:bg-black text-white px-6 bg-[#FF0909] w-[30%]" onClick={handleSubscribe}> Subscribe </button>{loading && <div className="w-4 h-4 border-2 border-gray-200 border-t-2 border-t-red-500 rounded-full animate-spin ml-2"></div>}
+                  <button className="py-2 rounded-2xl cursor-pointer hover:bg-black text-white px-6 bg-[#FF0909] w-[30%]" onClick={handleSubscribe}> Subscribe </button>{loading && <div className="w-4 h-4 border-2 border-gray-200 border-t-2 border-t-red-500 rounded-full animate-spin ml-2"></div>}
                 </div>
                 {success && <p className="text-green-500">{success}</p>}
                 {error && <p className="text-red-500">{error}</p>}

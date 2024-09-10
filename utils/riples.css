@@ -1,0 +1,26 @@
+/* Add this CSS to your global stylesheet */
+.ripple {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .ripple::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6); /* Adjust the color and opacity */
+    transform: scale(0);
+    transition: transform 0.5s, opacity 1s;
+    width: 300%; /* Adjust based on the size of the ripple */
+    height: 300%;
+    left: 50%;
+    top: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .ripple:active::after {
+    transform: scale(1);
+    opacity: 0;
+  }
+  
