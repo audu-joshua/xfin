@@ -62,7 +62,7 @@ export function Footer() {
                     placeholder="Email 🚀 "  
                     value={email}
                     onChange={(e) => setEmail(e.target.value)} 
-                    className=" w-[60%] focus:outline-none placeholder:text-black pl-2 text-black"
+                    className=" w-[60%] focus:outline-none text-sm placeholder:text-black pl-2 text-black"
                   />
                   <div className="flex items-center">
                     <button onClick={handleSubscribe}  className="py-2 rounded-2xl w-full text-white px-4 bg-[#FF0909] cursor-pointer">Subscribe</button>
